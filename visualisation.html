@@ -26,11 +26,70 @@
   <script src="js/timeline_and_tree.js"></script>
   <script src="js/bar_charts.js"></script>
   <svg>
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"  
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
      xmlns:xlink="http://www.w3.org/1999/xlink">
+     <!-- champion and host -->
+     <defs>
+       <pattern id="championAndHost"
+         width="4" height="4"
+         patternUnits="userSpaceOnUse">
 
-    <!-- Horizontal Stripe pattern -->  
-    <defs>  
+         <line x1="0" y1="2" x2="4" y2="2" stroke="#8b0000" />
+       </pattern>
+     </defs>
+
+     <!-- finalist and host -->
+     <defs>
+       <pattern id="finalistAndHost"
+         width="4" height="4"
+         patternUnits="userSpaceOnUse">
+
+         <line x1="0" y1="2" x2="4" y2="2" stroke="#E34234" />
+       </pattern>
+     </defs>
+
+     <!-- semifinalist and host -->
+     <defs>
+       <pattern id="semifinalistAndHost"
+         width="4" height="4"
+         patternUnits="userSpaceOnUse">
+
+         <line x1="0" y1="2" x2="4" y2="2" stroke="#ff4500" />
+       </pattern>
+     </defs>
+
+     <!-- quarterfinalist and host -->
+     <defs>
+       <pattern id="quarterfinalistAndHost"
+         width="4" height="4"
+         patternUnits="userSpaceOnUse">
+
+         <line x1="0" y1="2" x2="4" y2="2" stroke="#e6e600" />
+       </pattern>
+     </defs>
+
+     <!-- last16 and host -->
+     <defs>
+       <pattern id="last16AndHost"
+         width="4" height="4"
+         patternUnits="userSpaceOnUse">
+
+         <line x1="0" y1="2" x2="4" y2="2" stroke="#32CD32" />
+       </pattern>
+     </defs>
+
+     <!-- groupstages and host -->
+     <defs>
+       <pattern id="groupstagesAndHost"
+         width="4" height="4"
+         patternUnits="userSpaceOnUse">
+
+         <line x1="0" y1="2" x2="4" y2="2" stroke="#006400" />
+       </pattern>
+     </defs>
+
+    <!-- Horizontal Stripe pattern -->
+    <defs>
       <pattern id="horizontal-stripe"
         width="4" height="4"
         patternUnits="userSpaceOnUse">
@@ -39,8 +98,8 @@
         <line x1="2" y1="0" x2="2" y2="4" stroke="green" />
       </pattern>
     </defs>
-    <!-- Vertical Stripe pattern -->   
-    <!-- Vertical Stripe pattern -->   
+    <!-- Vertical Stripe pattern -->
+    <!-- Vertical Stripe pattern -->
     <defs>
        <pattern id="vertical-stripe"
          width="4" height="4"
@@ -48,7 +107,7 @@
 
           <line x1="2" y1="0" x2="2" y2="4" stroke="green" />
         </pattern>
-    </defs> 
+    </defs>
   </svg>
 </body>
 </html>

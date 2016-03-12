@@ -1,3 +1,7 @@
+.body {
+  color: #004b00;
+}
+
 .node circle {
   cursor: pointer;
   fill: #fff;

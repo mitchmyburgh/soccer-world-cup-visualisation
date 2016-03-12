@@ -4,7 +4,7 @@ var world = new Datamap({
   geographyConfig: {
    popupTemplate: function(geography, data) {
       return '<div class="hoverinfo">' + geography.properties.name + '<img src=' + data.flag + ' width = 20 height = 13 style="float: right;">' + '<br>' +
-              data.numWins + ' Wins: ' +  data.wins + '<br>' + data.numHostNation + ' times hosted: ' + data.hostNation;
+              data.text;
     },
     highlightOnHover: true,
     highlightFillColor: '#FC8D59',
@@ -13,15 +13,39 @@ var world = new Datamap({
   },
   fills: {
     defaultFill: "#ABDDA4",
-    authorHasTraveledTo: "url(#horizontal-stripe)"
+    authorHasTraveledTo: "url(#horizontal-stripe)",
+    champion: "#8b0000",
+    finalist: "#E34234",
+    semifinalist: "#ff4500",
+    quarterfinalist: "#e6e600",
+    last16: "#32CD32",
+    groupstages: "#006400",
+    championAndHost: "url(#championAndHost)",
+    finalistAndHost: "url(#finalistAndHost)",
+    semifinalistAndHost: "url(#semifinalistAndHost)",
+    quarterfinalistAndHost: "url(#quarterfinalistAndHost)",
+    last16AndHost: "url(#last16AndHost)",
+    groupstagesAndHost: "url(#groupstagesAndHost)",
   },
   data: {
-    USA: { fillKey: "authorHasTraveledTo", numWins: 5,  wins: "1991, 1992, 1993, 1994", numHostNation: 1, hostNation: "1991", flag: '../data/flags/za.png'},
-    JPN: { fillKey: "authorHasTraveledTo", numWins: 5,  wins: "1991, 1992, 1993, 1994", numHostNation: 1, hostNation: "1991", flag: '../data/flags/za.png' },
-    ITA: { fillKey: "authorHasTraveledTo", numWins: 5,  wins: "1991, 1992, 1993, 1994", numHostNation: 1, hostNation: "1991", flag: '../data/flags/za.png' },
-    CRI: { fillKey: "authorHasTraveledTo", numWins: 5,  wins: "1991, 1992, 1993, 1994", numHostNation: 1, hostNation: "1991", flag: '../data/flags/za.png' },
-    KOR: { fillKey: "authorHasTraveledTo", numWins: 5,  wins: "1991, 1992, 1993, 1994", numHostNation: 1, hostNation: "1991", flag: '../data/flags/za.png' },
-    DEU: { fillKey: "authorHasTraveledTo", numWins: 5,  wins: "1991, 1992, 1993, 1994", numHostNation: 1, hostNation: "1991", flag: '../data/flags/za.png' },
+    CAN: { fillKey: "groupstages", text: "Never won and never hosted", flag: '../data/flags/ca.png'},
+    USA: { fillKey: "semifinalistAndHost", text: "Hosted once: 1994", flag: '../data/flags/us.png'},
+    MEX: { fillKey: "quarterfinalistAndHost", text: "Hosted twice: 1970, 1986", flag: '../data/flags/mx.png'},
+    CUB: { fillKey: "quarterfinalist", text: "Never won and never hosted", flag: '../data/flags/cu.png'},
+    URY: { fillKey: "championAndHost", text: "Hosted once: 1930 <br> Won twice: 1930, 1950", flag: '../data/flags/za.png'},
+    ITA: { fillKey: "championAndHost", text: "Hosted once: 1934, 1990 <br> Won 4 Times: 1934, 1938, 1982, 2006", flag: '../data/flags/za.png'},
+    FRA: { fillKey: "championAndHost", text: "Hosted once: 1938, 1998 <br> Won once: 1998", flag: '../data/flags/za.png'},
+    BRA: { fillKey: "championAndHost", text: "Hosted twice: 1950, 2014 <br> Won 5 times: 1958, 1962, 1970, 1994, 2002", flag: '../data/flags/za.png'},
+    CHE: { fillKey: "quarterfinalistAndHost", text: "Hosted once: 1954", flag: '../data/flags/za.png'},
+    SWE: { fillKey: "finalistAndHost", text: "Hosted once: 1958", flag: '../data/flags/za.png'},
+    CHL: { fillKey: "semifinalistAndHost", text: "Hosted once: 1962", flag: '../data/flags/za.png'},
+    GBR: { fillKey: "championAndHost", text: "Hosted once: 1966 <br> Won once: 1966", flag: '../data/flags/za.png'},
+    DEU: { fillKey: "championAndHost", text: "Hosted once: 1974, 2006 <br> Won 4 times: 1954, 1974, 1990, 2014", flag: '../data/flags/za.png'},
+    ARG: { fillKey: "championAndHost", text: "Hosted once: 1978 <br> Won twice: 1978, 1986", flag: '../data/flags/za.png'},
+    ESP: { fillKey: "championAndHost", text: "Hosted once: 1982 <br> Won once: 2010", flag: '../data/flags/za.png'},
+    KOR: { fillKey: "semifinalistAndHost", text: "Hosted once: 2002", flag: '../data/flags/za.png'},
+    JPN: { fillKey: "last16AndHost", text: "Hosted once: 2002", flag: '../data/flags/za.png'},
+    ZAF: { fillKey: "groupstagesAndHost", text: "Hosted once: 2010", flag: '../data/flags/za.png'},
   },
   done: function(datamap) {
     datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
