@@ -101,22 +101,19 @@ function update(source) {
   .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
   .on("click", click);
 
-  nodeEnter.append("circle")
-  .attr("r", 1e-6)
-  .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+  //nodeEnter.append("circle")
+  //.attr("r", 1e-6)
+  //.style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
 
-  nodeEnter.append("svg")
-  .attr("r", 1e-6)
-  .attr("width", 50)
-  .attr("height", 50)
-  .append("circle")
-  .attr("cx", 25)
-  .attr("cy", 25)
-  .attr("r", 25)
-  .style("fill", "purple");
+  nodeEnter.append("svg:image")
+  .attr('x', -20)
+  .attr('y', -24)
+   .attr('width', 40)
+   .attr('height', 48)
+   .attr("xlink:href","data/flags/za.png")
 
   nodeEnter.append("text")
-  .attr("dy", function(d) { return d.isRight?14:-8;})
+  .attr("dy", function(d) { return d.isRight?30:-20;})
   .attr("text-anchor", "middle")
   .text(function(d) { return d.name; })
   .style("fill-opacity", 1e-6);
