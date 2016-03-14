@@ -7,7 +7,11 @@ body { background: #fff; }
 .chart { height: 400px; width: 900px; margin: 5px; margin: 5px auto;  }
 .node { color: #9CB5ED; border: 2px solid #C8C8C8; border-radius: 3px; background: #fff; transition: background 0.7s, color 0.7s; }
 .node p { font-size: 17px; line-height: 20px; height: 20px; font-weight: bold; padding: 3px; margin: 0; }
-
+.node img {width: 40px; padding: 5px;
+    margin-left:auto;
+    margin-right:auto;}
+.node img:nth-child(1) {margin-left: 20px}
+.node img:nth-child(3) {width: 80px}
 .node.main-date { width: 10px; height: 10px; border-radius: 50%; }
 .node.main-date p.node-name { top: -15px; font-size: 15px; position: absolute; opacity: 0; z-index: -1; left: -30px; transition: top 1s, opacity 1s; }
 .node.main-date:hover p.node-name { opacity: 1; top: -25px; }
