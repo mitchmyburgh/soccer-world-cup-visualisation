@@ -46,6 +46,21 @@ var world = new Datamap({
     KOR: { fillKey: "semifinalistAndHost", text: "Hosted once: 2002", flag: '../data/flags/za.png'},
     JPN: { fillKey: "last16AndHost", text: "Hosted once: 2002", flag: '../data/flags/za.png'},
     ZAF: { fillKey: "groupstagesAndHost", text: "Hosted once: 2010", flag: '../data/flags/za.png'},
+    //Countries that competed
+    HND: { fillKey: "groupstages", text: "Never won and never hosted", flag: '../data/flags/za.png'},
+    SLV: { fillKey: "groupstages", text: "Never won and never hosted", flag: '../data/flags/za.png'},
+    HTI: { fillKey: "groupstages", text: "Never won and never hosted", flag: '../data/flags/za.png'},
+    JAM: { fillKey: "groupstages", text: "Never won and never hosted", flag: '../data/flags/za.png'},
+    TTO: { fillKey: "groupstages", text: "Never won and never hosted", flag: '../data/flags/za.png'},
+    CRI: { fillKey: "quarterfinalist", text: "Never won and never hosted", flag: '../data/flags/za.png'},
+    COL: { fillKey: "quarterfinalist", text: "Never won and never hosted", flag: '../data/flags/za.png'},
+    ECU: { fillKey: "last16", text: "Never won and never hosted", flag: '../data/flags/za.png'},
+    PER: { fillKey: "quarterfinalist", text: "Never won and never hosted", flag: '../data/flags/za.png'},
+    BOL: { fillKey: "groupstages", text: "Never won and never hosted", flag: '../data/flags/za.png'},
+    PRY: { fillKey: "quarterfinalist", text: "Never won and never hosted", flag: '../data/flags/za.png'},
+    RUS: { fillKey: "groupstages", text: "Never won and never hosted", flag: '../data/flags/za.png'},
+    CHN: { fillKey: "groupstages", text: "Never won and never hosted", flag: '../data/flags/za.png'},
+    PRK: { fillKey: "quarterfinalist", text: "Never won and never hosted", flag: '../data/flags/za.png'},
   },
   done: function(datamap) {
     datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
