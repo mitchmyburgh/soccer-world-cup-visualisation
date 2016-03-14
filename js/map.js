@@ -57,3 +57,19 @@ var world = new Datamap({
     }
   }
 });
+
+
+var colors = d3.scale.category10();
+
+$("input[name='filter']").on("click", function () {
+  alert($('input[name=filter]:checked', '#filterForm').val());
+  world.updateChoropleth({
+    USA: colors(Math.random() * 10),
+    RUS: colors(Math.random() * 100),
+    AUS: { fillKey: 'defaultFill' },
+    BRA: colors(Math.random() * 50),
+    CAN: colors(Math.random() * 50),
+    ZAF: colors(Math.random() * 50),
+    IND: colors(Math.random() * 50),
+  });
+});

@@ -1,5 +1,6 @@
-.body {
-  color: #004b00;
+body {
+  background-color: #004b00;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .node circle {
@@ -17,4 +18,90 @@ path.link {
   fill: none;
   stroke: #ccc;
   stroke-width: 1.5px;
+}
+
+#header {
+	text-align: center;
+	color: #fff
+}
+/* Map */
+#map {
+	text-align: center;
+	border-style: 5px solid red;
+}
+#worldAndKey {
+	display: inline-flex;
+}
+#world {
+	display: inline-block;
+	background-color: #fff;
+	margin: auto 0px;
+}
+
+#key {
+	display: inline-block;
+	background-color: #fff;
+	padding: 0px 30px 30px 30px;
+	margin-top: -20px;
+	margin: auto 0px;
+	height: 370px;
+	width: 300px;
+}
+
+#filterForm {
+	display: inline-block;
+	background-color: #fff;
+	width: 1000px;
+	padding: 30px;
+}
+/* Key for map */
+/* Champion */
+#champion {
+	background-color: #8b0000;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+}
+/* finalist */
+#finalist {
+	background-color: #E34234;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+}
+/* semifinalist */
+#semifinalist {
+	background-color: #ff4500;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+}
+/* quarterfinalist */
+#quarterfinalist {
+	background-color: #e6e600;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+}
+/* last16 */
+#last16 {
+	background-color: #32CD32;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+}
+/* groupstage */
+#groupstage {
+	background-color: #006400;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+}
+/* host */
+#host {
+	background-image: url(https://www.xmple.com/wallpaper/black-streaks-stripes-lines-white-1920x1080-c2-fff0f5-000000-l2-102-204-a-0-f-1.svg);
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	background-size: cover;
 }
