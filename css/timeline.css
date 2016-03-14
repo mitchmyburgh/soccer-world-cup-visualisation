@@ -16,4 +16,4 @@ body { background: #fff; }
 .Treant .node.collapsed { background-color: #D7F5FF; color: #827A7A; }
 .Treant .node.collapsed .collapse-switch { background: none; }
 
-.timeline .node-desc { position: absolute; left: -999px; width: 2000px; background: #665B57; height: 3px; padding: 0; z-index: -1; top: 3px; }
+.timeline .node-desc { position: absolute; left: -999px; width: 4300px; background: #665B57; height: 3px; padding: 0; z-index: -1; top: 3px; }
