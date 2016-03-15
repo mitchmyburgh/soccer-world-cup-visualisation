@@ -826,6 +826,9 @@
 		this.image = nodeStructure.image;
 		this.image2 = nodeStructure.image2;
 
+		this.tooltip = nodeStructure.tooltip;
+		this.tooltip2 = nodeStructure.tooltip2;
+
 		this.link = UTIL.createMerge( tree.CONFIG.node.link,  nodeStructure.link);
 
 		this.connStyle = UTIL.createMerge(tree.CONFIG.connectors, nodeStructure.connectors);

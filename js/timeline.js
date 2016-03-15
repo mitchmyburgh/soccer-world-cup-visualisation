@@ -35,10 +35,12 @@ var simple_chart_config = {
 				collapsed: true,
 				children: [
 					{
-						text: { name: "Event 1" },
+						text: { name: "Uruguay (4)" },
+						image: "../data/flags/uy.png",
 						children: [
 							{
-								text: { name: "Event 1" },
+								text: { name: "Uruguay (6)" },
+								image: "../data/flags/uy.png",
 								children: [
 									{
 										text: { name: "Event 1" },
@@ -57,12 +59,38 @@ var simple_chart_config = {
 								]
 							},
 							{
-								text: { name: "Event 2" }
+								text: { name: "Yugoslavia (1)" },
+								image: "../data/flags/yu.png",
 							}
 						]
 					},
 					{
-						text: { name: "Event 2" }
+						text: { name: "Argentina (2)" },
+						image: "../data/flags/ar.png",
+						children: [
+							{
+								text: { name: "Argentina (6)" },
+								image: "../data/flags/ar.png",
+							},
+							{
+								text: { name: "United States (1)" },
+								image: "../data/flags/us.png",
+								children: [
+									{
+										text: { name: "United States" },
+										image: "../data/flags/us.png",
+									},
+									{
+										text: { name: "Paraguay" },
+										image: "../data/flags/py.png",
+									},
+									{
+										text: { name: "Belgium" },
+										image: "../data/flags/be.png",
+									}
+								]
+							}
+						]
 					}
 				]
 			},
@@ -174,6 +202,8 @@ var simple_chart_config = {
 			{
 				HTMLclass: "",
 				text: { name: "1970" },
+				image: "../data/flags/mx.png",
+				image2: "../data/flags/br.png",
 				collapsed: true,
 				children: [
 					{
@@ -187,6 +217,8 @@ var simple_chart_config = {
 			{
 				HTMLclass: "",
 				text: { name: "1974" },
+				image: "../data/flags/de.png",
+				image2: "../data/flags/de.png",
 				collapsed: true,
 				children: [
 					{
@@ -200,6 +232,8 @@ var simple_chart_config = {
 			{
 				HTMLclass: "",
 				text: { name: "1978" },
+				image: "../data/flags/ar.png",
+				image2: "../data/flags/ar.png",
 				collapsed: true,
 				children: [
 					{
@@ -213,6 +247,8 @@ var simple_chart_config = {
 			{
 				HTMLclass: "",
 				text: { name: "1982" },
+				image: "../data/flags/es.png",
+				image2: "../data/flags/it.png",
 				collapsed: true,
 				children: [
 					{
@@ -226,6 +262,8 @@ var simple_chart_config = {
 			{
 				HTMLclass: "",
 				text: { name: "1986" },
+				image: "../data/flags/mx.png",
+				image2: "../data/flags/ar.png",
 				collapsed: true,
 				children: [
 					{
@@ -239,6 +277,8 @@ var simple_chart_config = {
 			{
 				HTMLclass: "",
 				text: { name: "1990" },
+				image: "../data/flags/it.png",
+				image2: "../data/flags/de.png",
 				collapsed: true,
 				children: [
 					{
@@ -252,6 +292,8 @@ var simple_chart_config = {
 			{
 				HTMLclass: "",
 				text: { name: "1994" },
+				image: "../data/flags/us.png",
+				image2: "../data/flags/br.png",
 				collapsed: true,
 				children: [
 					{
@@ -265,6 +307,8 @@ var simple_chart_config = {
 			{
 				HTMLclass: "",
 				text: { name: "1998" },
+				image: "../data/flags/fr.png",
+				image2: "../data/flags/fr.png",
 				collapsed: true,
 				children: [
 					{
@@ -278,6 +322,8 @@ var simple_chart_config = {
 			{
 				HTMLclass: "",
 				text: { name: "2002" },
+				image: "../data/flags/jpsk.png",
+				image2: "../data/flags/br.png",
 				collapsed: true,
 				children: [
 					{
@@ -291,6 +337,8 @@ var simple_chart_config = {
 			{
 				HTMLclass: "",
 				text: { name: "2006" },
+				image: "../data/flags/de.png",
+				image2: "../data/flags/it.png",
 				collapsed: true,
 				children: [
 					{
@@ -304,6 +352,8 @@ var simple_chart_config = {
 			{
 				HTMLclass: "",
 				text: { name: "2010" },
+				image: "../data/flags/za.png",
+				image2: "../data/flags/es.png",
 				collapsed: true,
 				children: [
 					{
@@ -317,6 +367,8 @@ var simple_chart_config = {
 			{
 				HTMLclass: "",
 				text: { name: "2014" },
+				image: "../data/flags/br.png",
+				image2: "../data/flags/de.png",
 				collapsed: true,
 				children: [
 					{
