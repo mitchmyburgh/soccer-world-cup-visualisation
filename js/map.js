@@ -202,5 +202,27 @@ function cleanMap () {
 
 
 function Participants(year) {
+ world.updateChoropleth({
+	URY: { fillKey: "championAndHost", text: "Hosted: 1930 <br> Won twice: 1930", flag: '../data/flags/uy.png'},
+
+	ARG: { fillKey: "finalist", text: "Hosted once: 1978 <br> Won twice: 1978, 1986", flag: '../data/flags/ar.png'},
+	USA: { fillKey: "semifinalist", text: "Hosted once: 1994", flag: '../data/flags/us.png'},
+
+	BEL: { fillKey: "defaultFill", text: "Never won and never hosted", flag: '../data/flags/be.png'},
+	ROU: { fillKey: "defaultFill", text: "Never won and never hosted", flag: '../data/flags/ro.png'},
+	FRA: { fillKey: "defaultFill", text: "Hosted once: 1938, 1998 <br> Won once: 1998", flag: '../data/flags/fr.png'},
+
+	
+	MEX: { fillKey: "defaultFill", text: "Hosted twice: 1970, 1986", flag: '../data/flags/mx.png'},
+
+	BRA: { fillKey: "defaultFill", text: "Hosted twice: 1950, 2014 <br> Won 5 times: 1958, 1962, 1970, 1994, 2002", flag: '../data/flags/br.png'},
+
+	CHL: { fillKey: "defaultFill", text: "Hosted once: 1962", flag: '../data/flags/cl.png'},
+	PER: { fillKey: "defaultFill", text: "Never won and never hosted", flag: '../data/flags/pe.png'},
+	BOL: { fillKey: "defaultFill", text: "Never won and never hosted", flag: '../data/flags/bo.png'},
+	PRY: { fillKey: "defaultFill", text: "Never won and never hosted", flag: '../data/flags/py.png'},
+	
+  
+  });
 
 }
