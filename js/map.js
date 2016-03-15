@@ -117,9 +117,6 @@ var world = new Datamap({
   }
 });
 
-
-var colors = d3.scale.category10();
-
 function cleanMap () {
   world.updateChoropleth({
    //champ and host

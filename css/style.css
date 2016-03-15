@@ -1,6 +1,13 @@
 body {
-  background-color: #004b00;
+  background-color: #222222;
   font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.container {
+	position: absolute;
+  	margin-left: calc((100% - 910px)/2);
+	background-color: #fff;
+	width: 910px;
 }
 
 .node circle {
@@ -22,11 +29,11 @@ path.link {
 
 #header {
 	text-align: center;
-	color: #fff
+	color: #fff;
+	padding: 30px;
 }
 /* Map */
 #map {
-	text-align: center;
 	border-style: 5px solid red;
 }
 #worldAndKey {
@@ -45,13 +52,14 @@ path.link {
 	margin-top: -20px;
 	margin: auto 0px;
 	height: 370px;
-	width: 300px;
+	width: 150px;
 }
 
 #filterForm {
 	display: inline-block;
+	text-align: center;
 	background-color: #fff;
-	width: 1000px;
+	width: 850px;
 	padding: 30px;
 }
 /* Key for map */

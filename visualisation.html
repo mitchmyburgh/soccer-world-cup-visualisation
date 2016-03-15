@@ -21,32 +21,34 @@
 
 <body>
   <h1 id="header">Soccer World Cup Visualisation</h1>
-  <div id="map">
-    <form id="filterForm">
-      <input type="radio" name="filter" id="overview" value="overview" checked> <label for="overview">Overview</label>
-      <input type="radio" name="filter" id="goals_scored" value="goals_scored"> <label for="goals_scored">Goals Scored</label>
-      <input type="radio" name="filter" id="top_scorer" value="top_scorer"> <label for="top_scorer">Top Scorer</label>
-      <input type="radio" name="filter" id="attendance" value="attendance"> <label for="attendance">Attendance</label>
-    </form>
-    <div id="worldAndKey">
-      <div id="world" style="position: relative; width: 700px; height: 400px;"></div>
-      <div id="key">
-        <div id="overviewKey">
-          <h3>Key</h3>
-          <div id="champion"></div> <label for="champion">Champion</label> <br>
-          <div id="finalist"></div> <label for="finalist">Finalist</label> <br>
-          <div id="semifinalist"></div> <label for="semifinalist">Semi-Finalist</label> <br>
-          <div id="quarterfinalist"></div> <label for="quarterfinalist">Quarter-Finalist</label> <br>
-          <div id="last16"></div> <label for="last16">Last 16</label> <br>
-          <div id="groupstage"></div> <label for="groupstage">Group Stage</label> <br>
-          <div id="host"></div> <label for="host">Host</label>
+  <div class= "container">
+    <div id="map">
+      <form id="filterForm">
+        <input type="radio" name="filter" id="overview" value="overview" checked> <label for="overview">Overview</label>
+        <input type="radio" name="filter" id="goals_scored" value="goals_scored"> <label for="goals_scored">Goals Scored</label>
+        <input type="radio" name="filter" id="top_scorer" value="top_scorer"> <label for="top_scorer">Top Scorer</label>
+        <input type="radio" name="filter" id="attendance" value="attendance"> <label for="attendance">Attendance</label>
+      </form>
+      <div id="worldAndKey">
+        <div id="world" style="position: relative; width: 700px; height: 400px;"></div>
+        <div id="key">
+          <div id="overviewKey">
+            <h3>Key</h3>
+            <div id="champion"></div> <label for="champion">Champion</label> <br>
+            <div id="finalist"></div> <label for="finalist">Finalist</label> <br>
+            <div id="semifinalist"></div> <label for="semifinalist">Semi-Finalist</label> <br>
+            <div id="quarterfinalist"></div> <label for="quarterfinalist">Quarter-Finalist</label> <br>
+            <div id="last16"></div> <label for="last16">Last 16</label> <br>
+            <div id="groupstage"></div> <label for="groupstage">Group Stage</label> <br>
+            <div id="host"></div> <label for="host">Host</label>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!--<div id="chart"></div>-->
-  <div class="chart" id="OrganiseChart-simple"> 
+    <!--<div id="chart"></div>-->
+    <div class="chart" id="OrganiseChart-simple"> 
+    </div>
   </div>
   <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
   <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
