@@ -120,8 +120,7 @@ var world = new Datamap({
 
 var colors = d3.scale.category10();
 
-$("input[name='filter']").on("click", function () {
-  alert($('input[name=filter]:checked', '#filterForm').val());
+function cleanMap () {
   world.updateChoropleth({
    //champ and host
     URY: { fillKey: "defaultFill", text: "Hosted once: 1930 <br> Won twice: 1930, 1950", flag: '../data/flags/uy.png'},
@@ -200,4 +199,11 @@ $("input[name='filter']").on("click", function () {
   NLD: { fillKey: "defaultFill", text: "Never won and never hosted", flag: '../data/flags/nl.png'},
   
   });
-});
+}
+
+cleanMap();
+
+
+function Participants(year) {
+
+}
