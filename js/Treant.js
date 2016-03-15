@@ -998,7 +998,7 @@
 			// MITCH ADDED THIS
 			UTIL.addEvent(my_switch, 'click', function(e){
 				self.callOnClick(self.year);
-				alert(JSON.stringify())
+				alert(JSON.stringify(self));
 				e.preventDefault();
 				self.toggleCollapse();
 			});
