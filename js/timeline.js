@@ -29,6 +29,7 @@ var simple_chart_config = {
 				HTMLclass: "timeline",
 				text: { name: "1930" },
 				image: "../data/flags/small/uy-sml.png",
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -65,6 +66,7 @@ var simple_chart_config = {
 			{
 				HTMLclass: "",
 				text: { name: "1934" },
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -293,3 +295,8 @@ var simple_chart_config = {
 		]
 	}
 };
+
+
+function callOnClick(year) {
+	alert(year+" THIS IS WORKING!!");
+}

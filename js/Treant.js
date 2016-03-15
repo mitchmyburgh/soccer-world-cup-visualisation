@@ -824,6 +824,8 @@
 		this.pseudo = nodeStructure === 'pseudo' || nodeStructure['pseudo'];
 
 		this.image = nodeStructure.image;
+		this.year = nodeStructure.text.name;
+		this.callOnClick = nodeStructure.callOnClick;
 
 		this.link = UTIL.createMerge( tree.CONFIG.node.link,  nodeStructure.link);
 
@@ -993,7 +995,10 @@
 
 		addSwitchEvent: function(my_switch) {
 			var self = this;
+			// MITCH ADDED THIS
 			UTIL.addEvent(my_switch, 'click', function(e){
+				self.callOnClick(self.year);
+				alert(JSON.stringify())
 				e.preventDefault();
 				self.toggleCollapse();
 			});
