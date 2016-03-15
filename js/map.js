@@ -30,7 +30,7 @@ var world = new Datamap({
   data: 
   {
    //champ and host
-    URY: { fillKey: "championAndHost", text: "Hosted once: 1930 <br> Won twice: 1930, 1950", flag: '../data/flags/uy.png'},
+    URY: { fillKey: "championAndHost", text: "<span class='icon-soccer-court'></span>Hosted once: 1930 <br> <span class='icon-trophy'></span>Won twice: 1930, 1950", flag: '../data/flags/uy.png'},
     ITA: { fillKey: "championAndHost", text: "Hosted once: 1934, 1990 <br> Won 4 Times: 1934, 1938, 1982, 2006", flag: '../data/flags/it.png'},
     FRA: { fillKey: "championAndHost", text: "Hosted once: 1938, 1998 <br> Won once: 1998", flag: '../data/flags/fr.png'},
     BRA: { fillKey: "championAndHost", text: "Hosted twice: 1950, 2014 <br> Won 5 times: 1958, 1962, 1970, 1994, 2002", flag: '../data/flags/br.png'},
@@ -120,8 +120,7 @@ var world = new Datamap({
 
 var colors = d3.scale.category10();
 
-$("input[name='filter']").on("click", function () {
-  alert($('input[name=filter]:checked', '#filterForm').val());
+function cleanMap () {
   world.updateChoropleth({
    //champ and host
     URY: { fillKey: "defaultFill", text: "Hosted once: 1930 <br> Won twice: 1930, 1950", flag: '../data/flags/uy.png'},
@@ -200,5 +199,16 @@ $("input[name='filter']").on("click", function () {
   NLD: { fillKey: "defaultFill", text: "Never won and never hosted", flag: '../data/flags/nl.png'},
   
   });
+<<<<<<< HEAD
 });
 
+=======
+}
+
+//cleanMap();
+
+
+function Participants(year) {
+
+}
+>>>>>>> cac52dfdc7c37167bb04e8c475b3aaef7c34aa85
