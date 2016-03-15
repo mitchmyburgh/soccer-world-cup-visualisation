@@ -30,7 +30,7 @@ var world = new Datamap({
   data: 
   {
    //champ and host
-    URY: { fillKey: "championAndHost", text: "Hosted once: 1930 <br> Won twice: 1930, 1950", flag: '../data/flags/uy.png'},
+    URY: { fillKey: "championAndHost", text: "<span class='icon-soccer-court'></span>Hosted once: 1930 <br> <span class='icon-trophy'></span>Won twice: 1930, 1950", flag: '../data/flags/uy.png'},
     ITA: { fillKey: "championAndHost", text: "Hosted once: 1934, 1990 <br> Won 4 Times: 1934, 1938, 1982, 2006", flag: '../data/flags/it.png'},
     FRA: { fillKey: "championAndHost", text: "Hosted once: 1938, 1998 <br> Won once: 1998", flag: '../data/flags/fr.png'},
     BRA: { fillKey: "championAndHost", text: "Hosted twice: 1950, 2014 <br> Won 5 times: 1958, 1962, 1970, 1994, 2002", flag: '../data/flags/br.png'},
@@ -201,7 +201,7 @@ function cleanMap () {
   });
 }
 
-cleanMap();
+//cleanMap();
 
 
 function Participants(year) {
