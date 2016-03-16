@@ -18,11 +18,11 @@ $(function () {
 				$("#attendanceKey").hide();
 				break;
 			case "goals_scored":
-				goalsScoredMapDisp();
 				$("#overviewKey").hide();
 				$("#goalsScoredKey").show();
 				$("#topScorerKey").hide();
 				$("#attendanceKey").hide();
+				goalsScoredMapDisp();
 				break;
 			case "top_scorer":
 				topScorerMapDisp();
@@ -55,6 +55,11 @@ var updateOverviewByYear = function (year, collapsed) {
 			newMap = null;
 			break;
 		case "goals_scored":
+			for (var i = 0; i < goalsScoredByYear[year].length; i ++){
+				newMap[goalsScoredByYear[year][i].country].fillKey = goalsScoredByYear[year][i].fillKey;
+			}
+			world.updateChoropleth(newMap);
+			newMap = null;
 			break;
 		case "top_scorer":
 			break;
