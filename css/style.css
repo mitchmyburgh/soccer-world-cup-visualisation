@@ -1,12 +1,12 @@
 body {
-  background-color: #222222;
+  background-color: #fff;
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .container {
 	position: absolute;
   	margin-left: calc((100% - 960px)/2);
-	background-color: #fff;
+	background-color: #222222;
 	width: 960px;
 }
 
@@ -29,7 +29,7 @@ path.link {
 
 #header {
 	text-align: center;
-	color: #fff;
+	color: #000;
 	padding: 30px;
 }
 /* Map */
@@ -41,13 +41,14 @@ path.link {
 }
 #world {
 	display: inline-block;
-	background-color: #fff;
+	background-color: #222222;
 	margin: auto 0px;
 }
 
 #key {
 	display: inline-block;
-	background-color: #fff;
+	background-color: #222222;
+	color: #fff;
 	padding: 0px 30px 30px 30px;
 	margin-top: -20px;
 	margin: auto 0px;
@@ -58,7 +59,8 @@ path.link {
 #filterForm {
 	display: inline-block;
 	text-align: center;
-	background-color: #fff;
+	color: #fff;
+	background-color: #222222;
 	width: 900px;
 	padding: 30px;
 }
@@ -71,27 +73,27 @@ path.link {
 /* Overview */
 /* Champion */
 #champion {
-	background-color: #762a83;
+	background-color: #40004b;
 }
 /* finalist */
 #finalist {
-	background-color: #af8dc3;
+	background-color: #762a83;
 }
 /* semifinalist */
 #semifinalist {
-	background-color: #e7d4e8;
+	background-color: #9970ab;
 }
 /* quarterfinalist */
 #quarterfinalist {
-	background-color: #a6dba0;
+	background-color: #5aae61;
 }
 /* last16 */
 #last16 {
-	background-color: #5aae61;
+	background-color: #1b7837;
 }
 /* groupstage */
 #groupstage {
-	background-color: #1b7837;
+	background-color: #00441b;
 }
 /* host */
 #host {
@@ -131,4 +133,34 @@ path.link {
 /* 3,500,000 + */
 #attendance8 {
 	background-color: #023858;
+}
+
+/* goals scored */
+/* 0 - 4 */
+#goalsScored1 {
+	background-color: #fee391;
+}
+/* 5 - 9 */
+#goalsScored2 {
+	background-color: #fec44f;
+}
+/* 10-19 */
+#goalsScored3 {
+	background-color: #fe9929;
+}
+/* 20-39 */
+#goalsScored4 {
+	background-color: #ec7014;
+}
+/* 40 - 79*/
+#goalsScored5 {
+	background-color: #cc4c02;
+}
+/* 80 - 159*/
+#goalsScored6 {
+	background-color: #993404;
+}
+/* 160 + */
+#goalsScored7 {
+	background-color: #662506;
 }

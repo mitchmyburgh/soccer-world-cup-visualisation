@@ -2,6 +2,7 @@ var world = new Datamap({
   element: document.getElementById("world"),
   projection: 'mercator',
   geographyConfig: {
+    borderColor: '#000000',
    popupTemplate: function(geography, data) {
       return '<div class="hoverinfo">' + geography.properties.name + '<img src=' + data.flag + ' width = 20 height = 13 style="float: right;">' + '<br>' +
               data.text;
@@ -14,12 +15,12 @@ var world = new Datamap({
   fills: {
     defaultFill: "#d3d3d3",
     //overview
-    champion: "#762a83",
-    finalist: "#af8dc3",
-    semifinalist: "#e7d4e8",
-    quarterfinalist: "#a6dba0",
-    last16: "#5aae61",
-    groupstages: "#1b7837",
+    champion: "#40004b",
+    finalist: "#762a83",
+    semifinalist: "#9970ab",
+    quarterfinalist: "#5aae61",
+    last16: "#1b7837",
+    groupstages: "#00441b",
     championAndHost: "url(#championAndHost)",
     finalistAndHost: "url(#finalistAndHost)",
     semifinalistAndHost: "url(#semifinalistAndHost)",
@@ -35,6 +36,14 @@ var world = new Datamap({
     attendance6: "#0570b0",
     attendance7: "#045a8d",
     attendance8: "#023858",
+    //goals scored
+    goalsScored1: "#fee391",
+    goalsScored2: "#fec44f",
+    goalsScored3: "#fe9929",
+    goalsScored4: "#ec7014",
+    goalsScored5: "#cc4c02",
+    goalsScored6: "#993404",
+    goalsScored7: "#662506",
   },
   data:
   {

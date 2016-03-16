@@ -26,7 +26,7 @@ var simple_chart_config = {
 		text: { name: "BOB node" },
 		children: [
 			{
-				HTMLclass: "timeline",
+				HTMLclass: "timeline rootnode",
 				text: { desc: "",name: "1930" },
 				image: "../data/flags/uy.png",
 				image2: "../data/flags/uy.png",
@@ -126,7 +126,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "1934" },
 				image: "../data/flags/it.png",
 				image2: "../data/flags/it.png",
@@ -284,7 +284,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "1938" },
 				image: "../data/flags/fr.png",
 				image2: "../data/flags/it.png",
@@ -299,7 +299,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "1950" },
 				image: "../data/flags/br.png",
 				image2: "../data/flags/uy.png",
@@ -314,7 +314,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "1954" },
 				image: "../data/flags/ch.png",
 				image2: "../data/flags/de.png",
@@ -329,7 +329,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "1958" },
 				image: "../data/flags/se.png",
 				image2: "../data/flags/br.png",
@@ -344,7 +344,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "1962" },
 				image: "../data/flags/cl.png",
 				image2: "../data/flags/br.png",
@@ -359,7 +359,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "1966" },
 				image: "../data/flags/gb.png",
 				image2: "../data/flags/it.png",
@@ -374,7 +374,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "1970" },
 				image: "../data/flags/mx.png",
 				image2: "../data/flags/br.png",
@@ -389,7 +389,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "1974" },
 				image: "../data/flags/de.png",
 				image2: "../data/flags/de.png",
@@ -404,7 +404,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "1978" },
 				image: "../data/flags/ar.png",
 				image2: "../data/flags/ar.png",
@@ -419,7 +419,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "1982" },
 				image: "../data/flags/es.png",
 				image2: "../data/flags/it.png",
@@ -434,7 +434,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "1986" },
 				image: "../data/flags/mx.png",
 				image2: "../data/flags/ar.png",
@@ -449,7 +449,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "1990" },
 				image: "../data/flags/it.png",
 				image2: "../data/flags/de.png",
@@ -464,7 +464,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "1994" },
 				image: "../data/flags/us.png",
 				image2: "../data/flags/br.png",
@@ -479,7 +479,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "1998" },
 				image: "../data/flags/fr.png",
 				image2: "../data/flags/fr.png",
@@ -494,7 +494,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "2002" },
 				image: "../data/flags/jpsk.png",
 				image2: "../data/flags/br.png",
@@ -509,7 +509,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "2006" },
 				image: "../data/flags/de.png",
 				image2: "../data/flags/it.png",
@@ -524,7 +524,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "2010" },
 				image: "../data/flags/za.png",
 				image2: "../data/flags/es.png",
@@ -539,7 +539,7 @@ var simple_chart_config = {
 				]
 			},
 			{
-				HTMLclass: "",
+				HTMLclass: "rootnode",
 				text: { name: "2014" },
 				image: "../data/flags/br.png",
 				image2: "../data/flags/de.png",

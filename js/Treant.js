@@ -829,8 +829,9 @@
 		this.tooltip = nodeStructure.tooltip;
 		this.tooltip2 = nodeStructure.tooltip2;
 		this.year = nodeStructure.text.name;
-		this.callOnClick = nodeStructure.callOnClick;
-
+		if (nodeStructure.callOnClick) {
+			this.callOnClick = nodeStructure.callOnClick;
+		}
 		this.link = UTIL.createMerge( tree.CONFIG.node.link,  nodeStructure.link);
 
 		this.connStyle = UTIL.createMerge(tree.CONFIG.connectors, nodeStructure.connectors);
@@ -1001,7 +1002,9 @@
 			var self = this;
 			// MITCH ADDED THIS
 			UTIL.addEvent(my_switch, 'click', function(e){
-				self.callOnClick(self.year, self.collapsed);
+				if (self.callOnClick){
+					self.callOnClick(self.year, self.collapsed);
+				}
 				e.preventDefault();
 				self.toggleCollapse();
 			});
