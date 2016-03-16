@@ -1,6 +1,6 @@
 var cleanMap = {
    //champ and host
-    URY: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted once: 1930 <br> <span class='icon-trophy'></span>Won twice: 1930, 1950", flag: '../data/flags/uy.png'},
+    URY: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted once: 1930 (<span class='fa fa-users'></span>) <br> <span class='icon-trophy'></span>Won twice: 1930, 1950 <br> <span class='icon-soccer-shoe'></span> Top Player", flag: '../data/flags/uy.png'},
     ITA: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted twice: 1934, 1990 <br> <span class='icon-trophy'></span>Won 4 Times: 1934, 1938, 1982, 2006", flag: '../data/flags/it.png'},
     FRA: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted twice: 1938, 1998 <br> <span class='icon-trophy'></span>Won once: 1998", flag: '../data/flags/fr.png'},
     BRA: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted twice: 1950, 2014 <br> <span class='icon-trophy'></span>Won 5 times: 1958, 1962, 1970, 1994, 2002", flag: '../data/flags/br.png'},
@@ -255,7 +255,7 @@ var attendanceMap = [
 ];
 
 var topScorerMap = [
-  {country: "URY", fillKey: "championAndHost", icon: "icon-soccer-shoe"},
+  {country: "URY", fillKey: "championAndHost"},
   {country: "ITA", fillKey: "championAndHost"},
   {country: "FRA",fillKey: "championAndHost"},
   {country: "BRA", fillKey: "championAndHost"},
