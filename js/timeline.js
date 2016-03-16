@@ -289,6 +289,7 @@ var simple_chart_config = {
 				image: "../data/flags/fr.png",
 				image2: "../data/flags/it.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -304,6 +305,7 @@ var simple_chart_config = {
 				image: "../data/flags/br.png",
 				image2: "../data/flags/uy.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -319,6 +321,7 @@ var simple_chart_config = {
 				image: "../data/flags/ch.png",
 				image2: "../data/flags/de.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -334,6 +337,7 @@ var simple_chart_config = {
 				image: "../data/flags/se.png",
 				image2: "../data/flags/br.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -349,6 +353,7 @@ var simple_chart_config = {
 				image: "../data/flags/cl.png",
 				image2: "../data/flags/br.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -364,6 +369,7 @@ var simple_chart_config = {
 				image: "../data/flags/gb.png",
 				image2: "../data/flags/it.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -379,6 +385,7 @@ var simple_chart_config = {
 				image: "../data/flags/mx.png",
 				image2: "../data/flags/br.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -394,6 +401,7 @@ var simple_chart_config = {
 				image: "../data/flags/de.png",
 				image2: "../data/flags/de.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -409,6 +417,7 @@ var simple_chart_config = {
 				image: "../data/flags/ar.png",
 				image2: "../data/flags/ar.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -424,6 +433,7 @@ var simple_chart_config = {
 				image: "../data/flags/es.png",
 				image2: "../data/flags/it.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -439,6 +449,7 @@ var simple_chart_config = {
 				image: "../data/flags/mx.png",
 				image2: "../data/flags/ar.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -454,6 +465,7 @@ var simple_chart_config = {
 				image: "../data/flags/it.png",
 				image2: "../data/flags/de.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -469,6 +481,7 @@ var simple_chart_config = {
 				image: "../data/flags/us.png",
 				image2: "../data/flags/br.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -484,6 +497,7 @@ var simple_chart_config = {
 				image: "../data/flags/fr.png",
 				image2: "../data/flags/fr.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -499,6 +513,7 @@ var simple_chart_config = {
 				image: "../data/flags/jpsk.png",
 				image2: "../data/flags/br.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -514,6 +529,7 @@ var simple_chart_config = {
 				image: "../data/flags/de.png",
 				image2: "../data/flags/it.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -529,6 +545,7 @@ var simple_chart_config = {
 				image: "../data/flags/za.png",
 				image2: "../data/flags/es.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },
@@ -544,6 +561,7 @@ var simple_chart_config = {
 				image: "../data/flags/br.png",
 				image2: "../data/flags/de.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Event 1" },

@@ -44,6 +44,12 @@ var world = new Datamap({
     goalsScored5: "#cc4c02",
     goalsScored6: "#993404",
     goalsScored7: "#662506",
+    //Top scorer
+    topScorer1: "#c994c7",
+    topScorer2: "#df65b0",
+    topScorer3: "#e7298a",
+    topScorer4: "#ce1256",
+    topScorer5: "#91003f",
   },
   data:
   {

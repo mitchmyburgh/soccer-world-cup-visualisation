@@ -164,3 +164,25 @@ path.link {
 #goalsScored7 {
 	background-color: #662506;
 }
+
+/* top scorer */
+/* 1 */
+#topScorer1 {
+	background-color: #c994c7;
+}
+/* 2 */
+#topScorer2 {
+	background-color: #df65b0;
+}
+/* 3 */
+#topScorer3 {
+	background-color: #e7298a;
+}
+/* 4 */
+#topScorer4 {
+	background-color: #ce1256;
+}
+/* 5 */
+#topScorer5 {
+	background-color: #91003f;
+}

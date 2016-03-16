@@ -48,20 +48,33 @@ var updateOverviewByYear = function (year, collapsed) {
   var newMap = jQuery.extend(true, {}, cleanMap);
 	switch (mapType) {
 		case "overview":
-			for (var i = 0; i < compByYear[year].length; i ++){
-				newMap[compByYear[year][i].country].fillKey = compByYear[year][i].fillKey;
+			if (compByYear[year]){
+				for (var i = 0; i < compByYear[year].length; i ++){
+					newMap[compByYear[year][i].country].fillKey = compByYear[year][i].fillKey;
+				}
+				world.updateChoropleth(newMap);
+				newMap = null;
 			}
-			world.updateChoropleth(newMap);
-			newMap = null;
 			break;
 		case "goals_scored":
-			for (var i = 0; i < goalsScoredByYear[year].length; i ++){
-				newMap[goalsScoredByYear[year][i].country].fillKey = goalsScoredByYear[year][i].fillKey;
+			if (goalsScoredByYear[year]){
+				for (var i = 0; i < goalsScoredByYear[year].length; i ++){
+					newMap[goalsScoredByYear[year][i].country].fillKey = goalsScoredByYear[year][i].fillKey;
+				}
+				world.updateChoropleth(newMap);
+				newMap = null;
 			}
-			world.updateChoropleth(newMap);
-			newMap = null;
 			break;
 		case "top_scorer":
+			if (ScorerByYear[year]){
+				for (var i = 0; i < ScorerByYear[year].length; i ++){
+					console.log(ScorerByYear[year][i].country);
+					console.log(ScorerByYear[year][i].fillKey);
+					newMap[ScorerByYear[year][i].country].fillKey = ScorerByYear[year][i].fillKey;
+				}
+				world.updateChoropleth(newMap);
+				newMap = null;
+			}
 			break;
 		case "attendance":
 			break;
