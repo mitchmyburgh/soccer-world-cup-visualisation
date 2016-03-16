@@ -23,21 +23,14 @@ function barChartsWrap(query)
 		.scale(y)
 		.orient("left")
 		.ticks(10);
-		document.getElementById("tumelosChart").innerHTML = '';
-		document.getElementById("output").innerHTML = '';
-	var tip = d3.tip()
-	  .attr('class', 'd3-tip')
-	  .offset([-10, 0])
-	  .html(function(d) {
-	    return "<strong>"+query+":</strong> <span style='color:red'>" + d.frequency + "</span>";
-	  })
+
 	var svg = d3.select(".charting").append("svg")
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
 	  .append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-	svg.call(tip);
-	d3.tsv("data/"+selectedquery+".tsv", type, function(error, data) {
+
+	d3.tsv(selectedquery+".tsv", type, function(error, data) {
 	  if (error) throw error;
 
 	  x.domain(data.map(function(d) { return d.letter; }));
@@ -45,46 +38,27 @@ function barChartsWrap(query)
 
 	  svg.append("g")
 		  .attr("class", "x axis")
-		  .style("fill", "#fff")
 		  .attr("transform", "translate(0," + height + ")")
 		  .call(xAxis);
 
 	  svg.append("g")
 		  .attr("class", "y axis")
-		  .style("fill", "#fff")
 		  .call(yAxis)
 		.append("text")
 		  .attr("transform", "rotate(-90)")
 		  .attr("y", 6)
 		  .attr("dy", ".71em")
 		  .style("text-anchor", "end")
-		  .style("fill", "#fff")
 		  .text(query);
 
 	  svg.selectAll(".bar")
 		  .data(data)
 		.enter().append("rect")
-		  .attr("class", "bar "+selectedquery)
+		  .attr("class", "bar")
 		  .attr("x", function(d) { return x(d.letter); })
 		  .attr("width", x.rangeBand())
 		  .attr("y", function(d) { return y(d.frequency); })
-		  .attr("height", function(d) { return height - y(d.frequency); }).on("click", click)
-		  .on('mouseover', tip.show)
-      	  .on('mouseout', tip.hide);
-		/*switch (selectedquery){
-			case "topscorer":
-				svg.selectAll(".bar").style("fill", "#e7298a");
-				break;
-			case "attendance":
-				svg.selectAll(".bar").style("fill", "#3690c0");
-				break;
-			case "wcgoals":
-				svg.selectAll(".bar").style("fill", "#ec7014");
-				break;
-			default:
-				break;
-		}*/
-		
+		  .attr("height", function(d) { return height - y(d.frequency); }).on("click", click);
 	});
 
 	function type(d) {
@@ -124,7 +98,6 @@ function barChartsWrap(query)
 
 	var output = document.getElementById('output');
 	var theTitle = document.createElement("h3");
-	theTitle.setAttribute("class","smallGraphHeader");
 	theTitle.innerText=theName;
 	var elements = document.createElement("div");
 	elements.setAttribute("id","aWrapper"+theName);
@@ -145,7 +118,7 @@ function barChartsWrap(query)
 	labels : ["Uruguay","Argentina","United States","Yugoslavia","Chile","Brazil","France","Romania","Paraguay","Peru","Belgium","Bolivia","Mexico"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -159,7 +132,7 @@ function barChartsWrap(query)
 	labels : ["Italy","Czechoslovakia","Germany","Austria","Spain","Hungary","Switzerland","Sweden","Argentina","France","Netherlands","Romania","Egypt","Brazil","Belgium","United States"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -172,7 +145,7 @@ function barChartsWrap(query)
 	labels : ["Italy","Hungary","Brazil","Sweden","Czechoslovakia","France","Switzerland","Cuba","Romania","Germany","Poland","Norway","Belgium","Netherlands","Dutch East Indies"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -186,7 +159,7 @@ function barChartsWrap(query)
 	labels : ["Uruguay","Brazil","Sweden","Spain","Yugoslavia","Switzerland","Italy","England","Chile","United States","Paraguay","Mexico","Bolivia"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -199,7 +172,7 @@ function barChartsWrap(query)
 	labels : ["West Germany","Hungary","Austria","Uruguay","Switzerland","Brazil","England","Yugoslavia","Turkey","Italy","France","Belgium","Mexico","Czechoslovakia","Scotland","South Korea",],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -212,7 +185,7 @@ function barChartsWrap(query)
 	labels : ["Brazil","Sweden","France","West Germany","Wales","Soviet Union","Northern Ireland","Yugoslavia","Czechoslovakia","Hungary","England","Paraguay","Argentina","Scotland","Austria","Mexico"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -226,7 +199,7 @@ function barChartsWrap(query)
 	labels : ["Brazil","Czechoslovakia","Chile","Yugoslavia","Hungary","Soviet Union","West Germany","England","Italy","Argentina","Mexico","Uruguay","Spain","Colombia","Bulgaria","Switzerland"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -240,7 +213,7 @@ function barChartsWrap(query)
 	labels : ["England","West Germany","Portugal","Soviet Union","Argentina","Hungary","Uruguay","North Korea","Italy","Spain","Brazil","Mexico","Chile","France","Bulgaria","Switzerland"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -253,7 +226,7 @@ function barChartsWrap(query)
 	labels : ["Brazil","Italy","West Germany","Uruguay","Soviet Union","Mexico","Peru","England","Sweden","Belgium","Romania","Israel","Bulgaria","Morocco","Czechoslovakia","El Salvador"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -266,7 +239,7 @@ function barChartsWrap(query)
 	labels : ["West Germany","Netherlands","Poland","Brazil","Sweden","East Germany","Yugoslavia","Argentina","Scotland","Italy","Chile","Bulgaria","Uruguay","Australia","Haiti","Zaire"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -279,7 +252,7 @@ function barChartsWrap(query)
 	labels : ["Argentina","Netherlands","Brazil","Italy","Poland","West Germany","Austria","Peru","Tunisia","Spain","Scotland","France","Sweden","Iran","Hungary","Mexico"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -293,7 +266,7 @@ function barChartsWrap(query)
 	labels : ["Italy","West Germany","Poland","France","Brazil","England","Soviet Union","Austria","Northern Ireland","Belgium","Argentina","Spain","Algeria","Hungary","Scotland","Yugoslavia","Cameroon","Honduras","Czechoslovakia","Peru","Kuwait","Chile","New Zealand","El Salvador"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -308,7 +281,7 @@ function barChartsWrap(query)
 	labels : ["Argentina","West Germany","France","Belgium","Brazil","Mexico","Spain","England","Denmark","Soviet Union","Morocco","Italy","Paraguay","Poland","Bulgaria","Uruguay","Portugal","Hungary","Scotland","South Korea","Northern Ireland","Algeria","Iraq","Canada"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -321,7 +294,7 @@ function barChartsWrap(query)
 	labels : ["West Germany","Argentina","Italy","England","Yugoslavia","Czechoslovakia","Cameroon","Republic of Ireland","Brazil","Spain","Belgium","Romania","Costa Rica","Colombia","Netherlands","Uruguay","Soviet Union","Austria","Scotland","Egypt","Sweden","South Korea","United States","United Arab Emirates"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -334,7 +307,7 @@ function barChartsWrap(query)
 	labels : ["Brazil","Italy","Sweden","Bulgaria","Germany","Romania","Netherlands","Spain","Nigeria","Argentina","Belgium","Saudi Arabia","Mexico","United States","Switzerland","Republic of Ireland","Norway","Russia","Colombia","South Korea","Bolivia","Cameroon","Morocco","Greece"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -347,7 +320,7 @@ function barChartsWrap(query)
 	labels : ["France","Brazil","Croatia","Netherlands","Italy","Argentina","Germany","Denmark","England","Yugoslavia","Romania","Nigeria","Mexico","Paraguay","Norway","Chile","Spain","Morocco","Belgium","Iran","Colombia","Jamaica","Austria","South Africa","Cameroon","Tunisia","Scotland","Saudi Arabia","Bulgaria","South Korea","Japan","United States"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -360,7 +333,7 @@ function barChartsWrap(query)
 	labels : ["Brazil","Germany","Turkey","South Korea","Spain","England","Senegal","United States","Japan","Denmark","Mexico","Republic of Ireland","Sweden","Belgium","Italy","Paraguay","South Africa","Argentina","Costa Rica","Cameroon","Portugal","Russia","Croatia","Ecuador","Poland","Uruguay","Nigeria","France","Tunisia","Slovenia","China PR","Saudi Arabia"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -373,7 +346,7 @@ function barChartsWrap(query)
 	labels : ["Italy","France","Germany","Portugal","Brazil","Argentina","England","Ukraine","Spain","Switzerland","Netherlands","Ecuador","Ghana","Sweden","Mexico","Australia","South Korea","Paraguay","Ivory Coast","Czech Republic","Poland","Croatia","Angola","Tunisia","Iran","United States","Trinidad and Tobago","Japan","Saudi Arabia","Togo","Costa Rica","Serbia and Montenegro"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -386,7 +359,7 @@ function barChartsWrap(query)
 	labels : ["Spain","Netherlands","Germany,","Uruguay","Argentina","Brazil","Ghana","Paraguay","Japan","Chile","Portugal","United States","England","Mexico","South Korea","Slovakia","Ivory Coast","Slovenia","Switzerland","South Africa","Australia","New Zealand","Serbia","Denmark","Greece","Italy","Nigeria","Algeria","France","Honduras","Cameroon","North Korea"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",
@@ -399,7 +372,7 @@ function barChartsWrap(query)
 	labels : ["Germany","Argentina","Netherlands","Brazil","Colombia","Belgium","France","Costa Rica","Chile","Mexico","Switzerland","Uruguay","Greece","Algeria","United States","Nigeria","Ecuador","Portugal","Croatia","Bosnia and Herzegovina","Ivory Coast","Italy","Spain","Russia","Ghana","England","South Korea","Iran","Japan","Australia","Honduras","Cameroon"],
 				datasets : [
 					{
-						fillColor : "#fec44f",
+						fillColor : "rgba(0,0,0,0.5)",
 						strokeColor : "rgba(151,187,205,0.8)",
 						highlightFill : "rgba(151,187,205,0.75)",
 						highlightStroke : "rgba(151,187,205,1)",

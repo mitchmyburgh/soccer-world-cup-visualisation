@@ -186,3 +186,95 @@ path.link {
 #topScorer5 {
 	background-color: #91003f;
 }
+/* Tumelos Stuff */
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.bar.topscorer {
+  fill: #e7298a;
+}
+
+.bar.wcgoals {
+  fill: #ec7014;
+}
+
+.bar.attendance {
+  fill: #3690c0;
+}
+
+.bar.topscorer:hover {
+  fill: #91003f;
+}
+
+.bar.wcgoals:hover {
+  fill: #662506;
+}
+
+.bar.attendance:hover {
+  fill: #023858;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+	#xaxis2 .domain {
+		fill:none;
+		stroke:#000;
+	}
+	#xaxis text, #yaxis text {
+		font-size: 12px;
+	}
+
+.sidegraph {
+	fill: steelblue;
+	}
+
+.axis line {
+    fill: none;
+    stroke: #fff;
+    shape-rendering: crispEdges;
+}
+.smallGraphHeader {
+	color: #fff;
+	text-align: center;
+}
+
+/*tooltip tings*/
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}

@@ -16,6 +16,7 @@ $(function () {
 				$("#goalsScoredKey").hide();
 				$("#topScorerKey").hide();
 				$("#attendanceKey").hide();
+				$("#tumelosShit").hide();
 				break;
 			case "goals_scored":
 				$("#overviewKey").hide();
@@ -23,6 +24,8 @@ $(function () {
 				$("#topScorerKey").hide();
 				$("#attendanceKey").hide();
 				goalsScoredMapDisp();
+				$("#tumelosShit").show();
+				barChartsWrap("World cup goals");
 				break;
 			case "top_scorer":
 				topScorerMapDisp();
@@ -30,6 +33,8 @@ $(function () {
 				$("#goalsScoredKey").hide();
 				$("#topScorerKey").show();
 				$("#attendanceKey").hide();
+				$("#tumelosShit").show();
+				barChartsWrap("Top scorer");
 				break;
 			case "attendance":
 				$("#overviewKey").hide();
@@ -37,6 +42,8 @@ $(function () {
 				$("#topScorerKey").hide();
 				$("#attendanceKey").show();
 				attendanceMapDisp();
+				$("#tumelosShit").show();
+				barChartsWrap("Attendance");
 				break;
 			default:
 				break;
