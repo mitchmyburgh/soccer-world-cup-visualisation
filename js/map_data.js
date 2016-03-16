@@ -75,6 +75,7 @@ var cleanMap = {
   BGR: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/bg.png'},
   TUR: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/tr.png'},
   NLD: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/nl.png'},
+  MNE: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/nl.png'},
 
 };
 
