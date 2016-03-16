@@ -19,7 +19,7 @@
   <![endif]-->
 </head>
 
-<body>
+<body onload="filterForm.reset();">
   <h1 id="header">Soccer World Cup Visualisation</h1>
   <div class= "container">
     <div id="map">
@@ -42,12 +42,42 @@
             <div id="groupstage"></div> <label for="groupstage">Group Stage</label> <br>
             <div id="host"></div> <label for="host">Host</label>
           </div>
+          <div id="goalsScoredKey" style="display: none">
+            <h3>Key</h3>
+            <div id="champion"></div> <label for="champion">Champion</label> <br>
+            <div id="finalist"></div> <label for="finalist">Finalist</label> <br>
+            <div id="semifinalist"></div> <label for="semifinalist">Semi-Finalist</label> <br>
+            <div id="quarterfinalist"></div> <label for="quarterfinalist">Quarter-Finalist</label> <br>
+            <div id="last16"></div> <label for="last16">Last 16</label> <br>
+            <div id="groupstage"></div> <label for="groupstage">Group Stage</label> <br>
+            <div id="host"></div> <label for="host">Host</label>
+          </div>
+          <div id="topScorerKey" style="display: none">
+            <h3>Key</h3>
+            <div id="champion"></div> <label for="champion">Champion</label> <br>
+            <div id="finalist"></div> <label for="finalist">Finalist</label> <br>
+            <div id="semifinalist"></div> <label for="semifinalist">Semi-Finalist</label> <br>
+            <div id="quarterfinalist"></div> <label for="quarterfinalist">Quarter-Finalist</label> <br>
+            <div id="last16"></div> <label for="last16">Last 16</label> <br>
+            <div id="groupstage"></div> <label for="groupstage">Group Stage</label> <br>
+            <div id="host"></div> <label for="host">Host</label>
+          </div>
+          <div id="attendanceKey" style="display: none">
+            <h3>Key</h3>
+            <div id="champion"></div> <label for="champion">Champion</label> <br>
+            <div id="finalist"></div> <label for="finalist">Finalist</label> <br>
+            <div id="semifinalist"></div> <label for="semifinalist">Semi-Finalist</label> <br>
+            <div id="quarterfinalist"></div> <label for="quarterfinalist">Quarter-Finalist</label> <br>
+            <div id="last16"></div> <label for="last16">Last 16</label> <br>
+            <div id="groupstage"></div> <label for="groupstage">Group Stage</label> <br>
+            <div id="host"></div> <label for="host">Host</label>
+          </div>
         </div>
       </div>
     </div>
 
     <!--<div id="chart"></div>-->
-    <div class="chart" id="OrganiseChart-simple"> 
+    <div class="chart shrink" id="OrganiseChart-simple"> 
     </div>
   </div>
   <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>

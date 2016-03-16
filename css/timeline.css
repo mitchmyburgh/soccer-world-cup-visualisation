@@ -1,7 +1,12 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0; }
 
 
-
+/*.shrink{
+-webkit-transform:scale(0.7);
+-moz-transform:scale(0.7);
+-ms-transform:scale(0.7);
+transform:scale(0.7);
+}*/
 
 /* optional Container STYLES */
 .chart { height: 400px; width: 900px; margin: 5px; margin: 5px auto; }

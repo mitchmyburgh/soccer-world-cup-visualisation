@@ -33,6 +33,7 @@ var simple_chart_config = {
 				tooltip: "Host: Uruguay",
 				tooltip2: "Winner: Uruguay",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Uruguay (4)" },
@@ -130,6 +131,7 @@ var simple_chart_config = {
 				image: "../data/flags/it.png",
 				image2: "../data/flags/it.png",
 				collapsed: true,
+				callOnClick: callOnClick,
 				children: [
 					{
 						text: { name: "Italy (2)" },
@@ -554,3 +556,8 @@ var simple_chart_config = {
 		]
 	}
 };
+
+
+function callOnClick(year) {
+	alert(year+" THIS IS WORKING!!");
+}
