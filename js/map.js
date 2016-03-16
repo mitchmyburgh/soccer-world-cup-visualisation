@@ -12,20 +12,29 @@ var world = new Datamap({
     highlightBorderWidth: 3,
   },
   fills: {
-    defaultFill: "#ABDDA4",
-    authorHasTraveledTo: "url(#horizontal-stripe)",
-    champion: "#8b0000",
-    finalist: "#E34234",
-    semifinalist: "#ff4500",
-    quarterfinalist: "#e6e600",
-    last16: "#32CD32",
-    groupstages: "#006400",
+    defaultFill: "#d3d3d3",
+    //overview
+    champion: "#762a83",
+    finalist: "#af8dc3",
+    semifinalist: "#e7d4e8",
+    quarterfinalist: "#a6dba0",
+    last16: "#5aae61",
+    groupstages: "#1b7837",
     championAndHost: "url(#championAndHost)",
     finalistAndHost: "url(#finalistAndHost)",
     semifinalistAndHost: "url(#semifinalistAndHost)",
     quarterfinalistAndHost: "url(#quarterfinalistAndHost)",
     last16AndHost: "url(#last16AndHost)",
     groupstagesAndHost: "url(#groupstagesAndHost)",
+    //attendance
+    attendance1: "#ece7f2",
+    attendance2: "#d0d1e6",
+    attendance3: "#a6bddb",
+    attendance4: "#74a9cf",
+    attendance5: "#3690c0",
+    attendance6: "#0570b0",
+    attendance7: "#045a8d",
+    attendance8: "#023858",
   },
   data:
   {
@@ -49,6 +58,7 @@ var overviewMapDisp = function(){
     newMap[overviewMap[i].country].fillKey = overviewMap[i].fillKey;
   }
   world.updateChoropleth(newMap);
+  newMap=null;
 }
 
 var attendanceMapDisp = function(){
@@ -57,6 +67,7 @@ var attendanceMapDisp = function(){
     newMap[attendanceMap[i].country].fillKey = attendanceMap[i].fillKey;
   }
   world.updateChoropleth(newMap);
+  newMap=null;
 }
 var goalsScoredMapDisp = function(){
   var newMap = jQuery.extend(true, {}, cleanMap);
@@ -64,6 +75,7 @@ var goalsScoredMapDisp = function(){
     newMap[goalsScoredMap[i].country].fillKey = goalsScoredMap[i].fillKey;
   }
   world.updateChoropleth(newMap);
+  newMap=null;
 }
 
 var topScorerMapDisp = function(){
@@ -72,4 +84,5 @@ var topScorerMapDisp = function(){
     newMap[topScorerMap[i].country].fillKey = topScorerMap[i].fillKey;
   }
   world.updateChoropleth(newMap);
+  newMap=null;
 }

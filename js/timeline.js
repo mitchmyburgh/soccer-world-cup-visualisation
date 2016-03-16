@@ -558,6 +558,6 @@ var simple_chart_config = {
 };
 
 
-function callOnClick(year) {
-	alert(year+" THIS IS WORKING!!");
+function callOnClick(year, collapsed) {
+	updateOverviewByYear(year, collapsed);
 }

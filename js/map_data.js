@@ -1,10 +1,10 @@
 var cleanMap = {
    //champ and host
     URY: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted once: 1930 <br> <span class='icon-trophy'></span>Won twice: 1930, 1950", flag: '../data/flags/uy.png'},
-    ITA: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted once: 1934, 1990 <br> <span class='icon-trophy'></span>Won 4 Times: 1934, 1938, 1982, 2006", flag: '../data/flags/it.png'},
-    FRA: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted once: 1938, 1998 <br> <span class='icon-trophy'></span>Won once: 1998", flag: '../data/flags/fr.png'},
+    ITA: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted twice: 1934, 1990 <br> <span class='icon-trophy'></span>Won 4 Times: 1934, 1938, 1982, 2006", flag: '../data/flags/it.png'},
+    FRA: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted twice: 1938, 1998 <br> <span class='icon-trophy'></span>Won once: 1998", flag: '../data/flags/fr.png'},
     BRA: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted twice: 1950, 2014 <br> <span class='icon-trophy'></span>Won 5 times: 1958, 1962, 1970, 1994, 2002", flag: '../data/flags/br.png'},
-    DEU: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted once: 1974, 2006 <br> <span class='icon-trophy'></span>Won 4 times: 1954, 1974, 1990, 2014", flag: '../data/flags/de.png'},
+    DEU: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted twice: 1974, 2006 <br> <span class='icon-trophy'></span>Won 4 times: 1954, 1974, 1990, 2014", flag: '../data/flags/de.png'},
     ARG: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted once: 1978 <br> <span class='icon-trophy'></span>Won twice: 1978, 1986", flag: '../data/flags/ar.png'},
     ESP: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted once: 1982 <br> <span class='icon-trophy'></span>Won once: 2010", flag: '../data/flags/es.png'},
     GBR: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted once: 1966 <br> <span class='icon-trophy'></span>Won once: 1966", flag: '../data/flags/gb.png'},
@@ -63,6 +63,7 @@ var cleanMap = {
   SVN: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/si.png'},
   CZE: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/cz.png'},
   NOR: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/no.png'},
+  HUN: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/no.png'},
 
   UKR: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/ua.png'},
   ROU: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/ro.png'},
@@ -218,6 +219,7 @@ var goalsScoredMap = [
   {country: "SVN", fillKey: "last16"},
   {country: "CZE", fillKey: "last16"},
   {country: "NOR", fillKey: "last16"},
+  {country:"HUN", fillKey: "quarterfinalist"},
 
   {country: "UKR", fillKey: "quarterfinalist"},
   {country: "ROU", fillKey: "quarterfinalist"},
@@ -232,24 +234,24 @@ var goalsScoredMap = [
 ];
 
 var attendanceMap = [
-  {country: "URY", fillKey: "championAndHost"},
-  {country: "ITA", fillKey: "championAndHost"},
-  {country: "FRA",fillKey: "championAndHost"},
-  {country: "BRA", fillKey: "championAndHost"},
-  {country: "DEU", fillKey: "championAndHost"},
-    {country: "ARG", fillKey: "championAndHost"},
-    {country: "ESP", fillKey: "championAndHost"},
-    {country: "GBR", fillKey: "championAndHost"},
+  {country: "URY", fillKey: "attendance2"},
+  {country: "ITA", fillKey: "attendance6"},
+  {country: "FRA",fillKey: "attendance6"},
+  {country: "BRA", fillKey: "attendance7"},
+  {country: "DEU", fillKey: "attendance7"},
+    {country: "ARG", fillKey: "attendance4"},
+    {country: "ESP", fillKey: "attendance5"},
+    {country: "GBR", fillKey: "attendance4"},
 
     //hosts
-    {country: "USA", fillKey: "semifinalistAndHost"},
-    {country: "MEX", fillKey: "quarterfinalistAndHost"},
-    {country: "CHE", fillKey: "quarterfinalistAndHost"},
-    {country: "SWE", fillKey: "finalistAndHost"},
-    {country: "CHL", fillKey: "semifinalistAndHost"},
-    {country: "KOR", fillKey: "semifinalistAndHost"},
-    {country: "JPN", fillKey: "last16AndHost"},
-    {country: "ZAF", fillKey: "groupstagesAndHost"},
+    {country: "USA", fillKey: "attendance8"},
+    {country: "MEX", fillKey: "attendance5"},
+    {country: "CHE", fillKey: "attendance2"},
+    {country: "SWE", fillKey: "attendance2"},
+    {country: "CHL", fillKey: "attendance2"},
+    {country: "KOR", fillKey: "attendance6"},
+    {country: "JPN", fillKey: "attendance6"},
+    {country: "ZAF", fillKey: "attendance7"},
 ];
 
 var topScorerMap = [
@@ -274,36 +276,34 @@ var topScorerMap = [
 ];
 
 var compByYear = {"1930":[
-  {country: "URY", fillkey:"championAndHost"},
-  {country: "ARG", fillkey:"finalst"},
-  {country: "USA", fillkey:"semifinalist"},
-  {country: "ROU", fillkey:"semifinalist"},
-  {country: "BEL", fillkey:"groupstages"},
-  {country: "FRA", fillkey:"groupstages"},
-  {country: "MEX", fillkey:"groupstages"},
-  {country: "BRA", fillkey:"groupstages"},
-  {country: "CHL", fillkey:"groupstages"},
-  {country: "PER", fillkey:"groupstages"},
-  {country: "BOL", fillkey:"groupstages"},
-  {country: "PRY", fillkey:"groupstages"},
+  {country: "URY", fillKey:"championAndHost"},
+  {country: "ARG", fillKey:"finalist"},
+  {country: "USA", fillKey:"semifinalist"},
+  {country: "ROU", fillKey:"semifinalist"},
+  {country: "BEL", fillKey:"groupstages"},
+  {country: "FRA", fillKey:"groupstages"},
+  {country: "MEX", fillKey:"groupstages"},
+  {country: "BRA", fillKey:"groupstages"},
+  {country: "CHL", fillKey:"groupstages"},
+  {country: "PER", fillKey:"groupstages"},
+  {country: "BOL", fillKey:"groupstages"},
+  {country: "PRY", fillKey:"groupstages"}
 ],
 "1934":[
   {country:"ITA", fillKey: "championAndHost"},
   {country:"CZE", fillKey: "semifinalist"},
   {country:"AUT", fillKey: "semifinalist"},
   {country:"DEU", fillKey: "semifinalist"},
-  {country:"HUN", fillKey: "quarterfinalist"}, 
+  {country:"HUN", fillKey: "quarterfinalist"},
   {country:"SWE", fillKey: "quarterfinalist"},
-  {country:"ESP", fillKey: "quarterfinalist"}, 
+  {country:"ESP", fillKey: "quarterfinalist"},
   {country:"CHE", fillKey: "quarterfinalist"},
   {country:"USA", fillKey: "groupstages"},
   {country:"BRA", fillKey: "groupstages"},
   {country:"ARG", fillKey: "groupstages"},
-  {country:"EGY", fillKey: "groupstages"},   
-  {country:"ROU", fillKey: "groupstages"}, 
-  {country:"BEL", fillKey: "groupstages"}, 
-  {country:"NLD", fillKey: "groupstages"}, 
-  {country:"FRA", fillKey: "groupstages"}, 
-    
-  
-]} 
+  {country:"EGY", fillKey: "groupstages"},
+  {country:"ROU", fillKey: "groupstages"},
+  {country:"BEL", fillKey: "groupstages"},
+  {country:"NLD", fillKey: "groupstages"},
+  {country:"FRA", fillKey: "groupstages"}
+]}

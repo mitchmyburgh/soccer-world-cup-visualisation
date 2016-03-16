@@ -1001,8 +1001,7 @@
 			var self = this;
 			// MITCH ADDED THIS
 			UTIL.addEvent(my_switch, 'click', function(e){
-				self.callOnClick(self.year);
-				alert(JSON.stringify(self));
+				self.callOnClick(self.year, self.collapsed);
 				e.preventDefault();
 				self.toggleCollapse();
 			});
