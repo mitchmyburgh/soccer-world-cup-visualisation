@@ -1,13 +1,13 @@
 var cleanMap = {
    //champ and host
     URY: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted once: 1930 (<span class='fa fa-users'></span>) <br> <span class='icon-trophy'></span>Won twice: 1930, 1950 <br> <span class='icon-soccer-shoe'></span>Top Player: Diego Forlan(2010)", flag: '../data/flags/uy.png'},
-    ITA: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted twice: 1934, 1990 <br> <span class='icon-trophy'></span>Won 4 Times: 1934, 1938, 1982, 2006<br> <span class='icon-soccer-shoe'></span>Top Player: Diego Forlan(1982)", flag: '../data/flags/it.png'},
+    ITA: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted twice: 1934, 1990 <br> <span class='icon-trophy'></span>Won 4 Times: 1934, 1938, 1982, 2006<br> <span class='icon-soccer-shoe'></span>Top Player: Salvitore Sillacci(1982), Paolo Rossi 1990", flag: '../data/flags/it.png'},
     FRA: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted twice: 1938, 1998 <br> <span class='icon-trophy'></span>Won once: 1998<br> <span class='icon-soccer-shoe'></span>Top Player: Thierry Henry(1958)", flag: '../data/flags/fr.png'},
     BRA: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted twice: 1950, 2014 <br> <span class='icon-trophy'></span>Won 5 times: 1958, 1962, 1970, 1994, 2002 <br> <span class='icon-soccer-shoe'></span>Top Player: Leonidas(1938), Ademir(1950), Garrincha and Vava(1962), Ronaldo(2002)", flag: '../data/flags/br.png'},
-    DEU: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted twice: 1974, 2006 <br> <span class='icon-trophy'></span>Won 4 times: 1954, 1974, 1990, 2014<br> <span class='icon-soccer-shoe'></span>Top Player: Thomas Mueller(2010)", flag: '../data/flags/de.png'},
+    DEU: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted twice: 1974, 2006 <br> <span class='icon-trophy'></span>Won 4 times: 1954, 1974, 1990, 2014<br> <span class='icon-soccer-shoe'></span>Top Player:Gert Mueller(1970), Miroslav Klose(2006),Thomas Mueller(2010)", flag: '../data/flags/de.png'},
     ARG: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted once: 1978 <br> <span class='icon-trophy'></span>Won twice: 1978, 1986 <span class='icon-soccer-shoe'></span>Top Player: Guillermo Stabile(1930), Mario Kempes(1978)", flag: '../data/flags/ar.png'},
-    ESP: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted once: 1982 <br> <span class='icon-trophy'></span>Won once: 2010<br> <span class='icon-soccer-shoe'></span>Top Player: Diego Forlan(2010)", flag: '../data/flags/es.png'},
-    GBR: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted once: 1966 <br> <span class='icon-trophy'></span>Won once: 1966<br> <span class='icon-soccer-shoe'></span>Top Player: Diego Forlan(1986)", flag: '../data/flags/gb.png'},
+    ESP: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted once: 1982 <br> <span class='icon-trophy'></span>Won once: 2010<br> <span class='icon-soccer-shoe'></span>Top Player: David Villa(2010)", flag: '../data/flags/es.png'},
+    GBR: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted once: 1966 <br> <span class='icon-trophy'></span>Won once: 1966<br> <span class='icon-soccer-shoe'></span>Top Player: Gary Linneker(1986)", flag: '../data/flags/gb.png'},
 
     //hosts
     USA: { fillKey: "defaultFill", text: "<span class='icon-soccer-court'></span>Hosted once: 1994", flag: '../data/flags/us.png'},
@@ -28,14 +28,14 @@ var cleanMap = {
     CAN: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/ca.png'},
     CUB: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/cu.png'},
     CRI: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/cr.png'},
-    COL: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted<br> <span class='icon-soccer-shoe'></span>Top Player: Diego Forlan(2010)", flag: '../data/flags/co.png'},
+    COL: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted<br> <span class='icon-soccer-shoe'></span>Top Player: James Rodriguez(2014)", flag: '../data/flags/co.png'},
     ECU: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/ec.png'},
     PER: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/pe.png'},
     BOL: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/bo.png'},
     PRY: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/py.png'},
 
 //asia australasia
-    RUS: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted<br> <span class='icon-soccer-shoe'></span>Top Player: Olag Solenko(1994)", flag: '../data/flags/ru.png'},
+    RUS: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted<br> <span class='icon-soccer-shoe'></span>Top Player: Andrei Arshavin(1962),Olag Solenko(1994)", flag: '../data/flags/ru.png'},
     CHN: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/cn.png'},
     PRK: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/kp.png'},
     AUS: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/au.png'},
@@ -67,14 +67,14 @@ var cleanMap = {
 
   UKR: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/ua.png'},
   ROU: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/ro.png'},
-  PRT: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted<br> <span class='icon-soccer-shoe'></span>Top Player: Diego Forlan(1966)", flag: '../data/flags/pt.png'},
+  PRT: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted<br> <span class='icon-soccer-shoe'></span>Top Player: Eusabio(1966)", flag: '../data/flags/pt.png'},
   BEL: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/be.png'},
-  POL: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted<br> <span class='icon-soccer-shoe'></span>Top Player: Diego Forlan(2010)", flag: '../data/flags/pl.png'},
+  POL: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted<br> <span class='icon-soccer-shoe'></span>Top Player: Robert Lawandowski(1974)", flag: '../data/flags/pl.png'},
   AUT: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/at.png'},
-  HRV: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted<br> <span class='icon-soccer-shoe'></span>Top Player: Diego Forlan(1998)", flag: '../data/flags/hr.png'},
-  BGR: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted<br> <span class='icon-soccer-shoe'></span>Top Player: Diego Forlan(1994)", flag: '../data/flags/bg.png'},
+  HRV: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted<br> <span class='icon-soccer-shoe'></span>Top Player: Davor Suker(1998)", flag: '../data/flags/hr.png'},
+  BGR: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted<br> <span class='icon-soccer-shoe'></span>Top Player: Hristo Stroikov(1994)", flag: '../data/flags/bg.png'},
   TUR: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted", flag: '../data/flags/tr.png'},
-  NLD: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted<br> <span class='icon-soccer-shoe'></span>Top Player: Diego Forlan(2010)", flag: '../data/flags/nl.png'},
+  NLD: { fillKey: "defaultFill", text: "Never <span class='icon-trophy'></span>Won and never <span class='icon-soccer-court'></span>Hosted<br> <span class='icon-soccer-shoe'></span>Top Player: Wesley Schneider(2010)", flag: '../data/flags/nl.png'},
 
 };
 
