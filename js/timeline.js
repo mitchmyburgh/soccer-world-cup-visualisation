@@ -43,24 +43,36 @@ var simple_chart_config = {
 								image: "../data/flags/uy.png",
 								children: [
 									{
-										text: { name: "Event 1" },
-										children: [
-											{
-												text: { name: "Event 1" },
-											},
-											{
-												text: { name: "Event 2" }
-											}
-										]
+										text: { name: "Romania" },
+										image: "../data/flags/ro.png",
 									},
 									{
-										text: { name: "Event 2" }
+										text: { name: "Uruguay" },
+										image: "../data/flags/uy.png",
+									},
+									{
+										text: { name: "Peru" },
+										image: "../data/flags/pe.png",
 									}
 								]
 							},
 							{
 								text: { name: "Yugoslavia (1)" },
 								image: "../data/flags/yu.png",
+								children: [
+									{
+										text: { name: "Yugoslavia" },
+										image: "../data/flags/yu.png",
+									},
+									{
+										text: { name: "Brazil" },
+										image: "../data/flags/br.png",
+									},
+									{
+										text: { name: "Bolivia" },
+										image: "../data/flags/bo.png",
+									}
+								]
 							}
 						]
 					},
@@ -71,6 +83,24 @@ var simple_chart_config = {
 							{
 								text: { name: "Argentina (6)" },
 								image: "../data/flags/ar.png",
+								children: [
+									{
+										text: { name: "Argentina" },
+										image: "../data/flags/ar.png",
+									},
+									{
+										text: { name: "France" },
+										image: "../data/flags/fr.png",
+									},
+									{
+										text: { name: "Mexico" },
+										image: "../data/flags/mx.png",
+									},
+									{
+										text: { name: "Chile" },
+										image: "../data/flags/cl.png",
+									}
+								]
 							},
 							{
 								text: { name: "United States (1)" },
@@ -102,10 +132,152 @@ var simple_chart_config = {
 				collapsed: true,
 				children: [
 					{
-						text: { name: "Event 1" },
+						text: { name: "Italy (2)" },
+						image: "../data/flags/it.png",
+						children: [
+							{
+								text: { name: "Italy (1)" },
+								image: "../data/flags/it.png",
+								children: [
+									{
+										text: { name: "Italy (1)" },
+										image: "../data/flags/it.png",
+										children: [
+											{
+												text: { name: "Italy (7)" },
+												image: "../data/flags/it.png",
+											},
+											{
+												text: { name: "United States (1)" },
+												image: "../data/flags/us.png",
+											}
+										]
+									},
+									{
+										text: { name: "Spain (0)" },
+										image: "../data/flags/es.png",
+										children: [
+											{
+												text: { name: "Spain (3)" },
+												image: "../data/flags/es.png",
+											},
+											{
+												text: { name: "Brazil (1)" },
+												image: "../data/flags/br.png",
+											}
+										]
+									}
+								]
+							},
+							{
+								text: { name: "Austria (0)" },
+								image: "../data/flags/at.png",
+								children: [
+									{
+										text: { name: "Austria (1)" },
+										image: "../data/flags/at.png",
+										children: [
+											{
+												text: { name: "Austria (3)" },
+												image: "../data/flags/at.png",
+											},
+											{
+												text: { name: "France (2)" },
+												image: "../data/flags/fr.png",
+											}
+										]
+									},
+									{
+										text: { name: "Hungary (1)" },
+										image: "../data/flags/hu.png",
+										children: [
+											{
+												text: { name: "Egypt (2)" },
+												image: "../data/flags/eg.png",
+											},
+											{
+												text: { name: "Hungary (4)" },
+												image: "../data/flags/hu.png",
+											}
+										]
+									}
+								]
+							}
+						]
 					},
 					{
-						text: { name: "Event 2" }
+						text: { name: "Czechoslovakia (1)" },
+						image: "../data/flags/cz.png",
+						children: [
+							{
+								text: { name: "Czechoslovakia (3)" },
+								image: "../data/flags/cz.png",
+								children: [
+									{
+										text: { name: "Czechoslovakia (3)" },
+										image: "../data/flags/cz.png",
+										children: [
+											{
+												text: { name: "Czechoslovakia (2)" },
+												image: "../data/flags/cz.png",
+											},
+											{
+												text: { name: "Romania (1)" },
+												image: "../data/flags/ro.png",
+											}
+										]
+									},
+									{
+										text: { name: "Switzerland (2)" },
+										image: "../data/flags/ch.png",
+										children: [
+											{
+												text: { name: "Netherlands (2)" },
+												image: "../data/flags/nl.png",
+											},
+											{
+												text: { name: "Switzerland (3)" },
+												image: "../data/flags/ch.png",
+											}
+										]
+									}
+								]
+							},
+							{
+								text: { name: "Germany (1)" },
+								image: "../data/flags/de.png",
+								children: [
+									{
+										text: { name: "Germany (2)" },
+										image: "../data/flags/de.png",
+										children: [
+											{
+												text: { name: "Germany (5)" },
+												image: "../data/flags/de.png",
+											},
+											{
+												text: { name: "Belgium (2)" },
+												image: "../data/flags/be.png",
+											}
+										]
+									},
+									{
+										text: { name: "Sweden (1)" },
+										image: "../data/flags/se.png",
+												children: [
+											{
+												text: { name: "Sweden (3)" },
+												image: "../data/flags/se.png",
+											},
+											{
+												text: { name: "Argentina (2)" },
+												image: "../data/flags/ar.png",
+											}
+										]
+									}
+								]
+							}
+						]
 					}
 				]
 			},
