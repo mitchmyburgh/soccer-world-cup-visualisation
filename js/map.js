@@ -4,7 +4,7 @@ var world = new Datamap({
   geographyConfig: {
     borderColor: '#000000',
    popupTemplate: function(geography, data) {
-      return '<div class="hoverinfo" style="font-size: 17px;font-family: "PT Sans Narrow", sans-serif">' + geography.properties.name + '<img src=' + data.flag + ' width = 20 height = 13 style="float: right;">' + '<br>' +
+      return '<div class="hoverinfo" style="font-size: 17px;font-family: "PT Sans Narrow", sans-serif"><strong>' + geography.properties.name + '</strong><img src=' + data.flag + ' width = 20 height = 13 style="float: right;">' + '<br>' +
               data.text+"</div>";
     },
     highlightOnHover: true,
