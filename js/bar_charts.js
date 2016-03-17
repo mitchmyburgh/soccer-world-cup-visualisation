@@ -29,7 +29,7 @@ function barChartsWrap(query)
 	  .attr('class', 'd3-tip')
 	  .offset([-10, 0])
 	  .html(function(d) {
-	    return "<strong>"+query+":</strong> <span style='color:white'>" + d.frequency + "</span><br>"+d.showText;
+	    return "<div class='mapHover'><strong>"+query+":</strong> <span style='color:white'>" + d.frequency + "</span><br>"+d.showText+"</div>";
 	  })
 	var svg = d3.select(".charting").append("svg")
 		.attr("class", "bigGraph")
@@ -115,6 +115,7 @@ function barChartsWrap(query)
 	var theTitle = document.createElement("h3");
 	theTitle.setAttribute("class","smallGraphHeader");
 	theTitle.innerText=theName;
+	console.log(theTitle.innerText);
 	var elements = document.createElement("div");
 	elements.setAttribute("id","aWrapper"+theName);
 	elements.setAttribute("width","100%");

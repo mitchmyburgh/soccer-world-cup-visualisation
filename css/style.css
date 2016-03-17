@@ -1,8 +1,12 @@
 body {
   background-color: #fff;
   font-family: 'PT Sans Narrow', sans-serif;
+  background-image: url("/img/grass2.jpg");
+  background-repeat: repeat;
 }
-
+.mapHover {
+  font-size: 17px;
+}
 .container {
 	position: absolute;
   	margin-left: calc((100% - 960px)/2);
@@ -29,8 +33,28 @@ path.link {
 
 #header {
 	text-align: center;
-	color: #000;
+	color: #fff;
+  font-size: 3em;
 	padding: 30px;
+  display: inline-block;
+}
+.iconsForHeader{
+	text-align: center;
+	color: #fff;
+  display: inline-block;
+  font-size: 3em;
+}
+#headerDiv2 {
+  display: inline-block;
+  width: 960px;
+  background-color: #222222;
+  border-bottom: 2px solid white;
+}
+label {
+  font-size:1.2em;
+}
+#headerDiv {
+  text-align: center;
 }
 /* Map */
 #map {
