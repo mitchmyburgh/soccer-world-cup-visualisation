@@ -4,7 +4,7 @@ function barChartsWrap(query)
 	if(query=="Top scorer"){selectedquery="topscorer";}
 	if(query=="Attendance"){selectedquery="attendance";}
 	if(query=="World cup goals"){selectedquery="wcgoals";}
-	
+
 	var margin = {top: 20, right: 20, bottom: 30, left: 70},
 		width = 960 - margin.left - margin.right,
 		height = 500 - margin.top - margin.bottom;
@@ -72,7 +72,7 @@ function barChartsWrap(query)
 		  .attr("height", function(d) { return height - y(d.frequency); }).on("click", click)
 		  .on('mouseover', tip.show)
       	  .on('mouseout', tip.hide);
-		
+
 	});
 
 	function type(d) {
@@ -121,13 +121,13 @@ function barChartsWrap(query)
 	elements.setAttribute("style","display:inline-block");
 	elements.appendChild(theTitle);
 	output.appendChild(elements);
-	
+
 	var outputs = document.getElementById('aWrapper'+theName);
 	outputs.appendChild(ele);
 
-	var randomScalingFactor = function(){	
+	var randomScalingFactor = function(){
 			 return Math.round(Math.random()*100);
-			
+
 	};
 
 	var WCOneGoals = {
@@ -143,7 +143,7 @@ function barChartsWrap(query)
 				]
 
 			};
-			
+
 	var WCTwoGoals = {
 	labels : ["Italy","Czechoslovakia","Germany","Austria","Spain","Hungary","Switzerland","Sweden","Argentina","France","Netherlands","Romania","Egypt","Brazil","Belgium","United States"],
 				datasets : [
@@ -156,7 +156,7 @@ function barChartsWrap(query)
 					}
 				]
 
-			};		
+			};
 	var WCThreeGoals = {
 	labels : ["Italy","Hungary","Brazil","Sweden","Czechoslovakia","France","Switzerland","Cuba","Romania","Germany","Poland","Norway","Belgium","Netherlands","Dutch East Indies"],
 				datasets : [
@@ -170,7 +170,7 @@ function barChartsWrap(query)
 				]
 
 			};
-			
+
 	var WCFourGoals = {
 	labels : ["Uruguay","Brazil","Sweden","Spain","Yugoslavia","Switzerland","Italy","England","Chile","United States","Paraguay","Mexico","Bolivia"],
 				datasets : [
@@ -260,7 +260,7 @@ function barChartsWrap(query)
 						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [13,15,16,6,7,5,12,9,3,5,1,2,1,0,2,0]
-					
+
 					}
 				]
 			};
@@ -288,10 +288,10 @@ function barChartsWrap(query)
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [12,12,11,16,15,6,7,5,5,3,8,4,5,12,8,2,1,2,2,2,2,3,2,1]
 					}
-						
+
 				]
 
-			};		
+			};
 
 	var WCThirteenGoals = {
 	labels : ["Argentina","West Germany","France","Belgium","Brazil","Mexico","Spain","England","Denmark","Soviet Union","Morocco","Italy","Paraguay","Poland","Bulgaria","Uruguay","Portugal","Hungary","Scotland","South Korea","Northern Ireland","Algeria","Iraq","Canada"],
@@ -396,7 +396,7 @@ function barChartsWrap(query)
 					}
 				]
 
-			};		
+			};
 			window.onload = function(){
 			var ctx = document.getElementById("wrapper"+WrapperName).getContext("2d");
 			if(WrapperName=="1930")
@@ -405,8 +405,8 @@ function barChartsWrap(query)
 						responsive: true,
 					barShowStroke: false
 					});
-				
-					 
+
+
 			}
 			if(WrapperName=="1934")
 			{
