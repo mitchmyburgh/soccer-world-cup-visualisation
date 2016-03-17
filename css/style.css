@@ -283,3 +283,7 @@ path.link {
   top: 100%;
   left: 0;
 }
+
+.tinyFlag {
+	width: 20px;
+}

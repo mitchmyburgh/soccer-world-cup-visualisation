@@ -29,7 +29,7 @@ function barChartsWrap(query)
 	  .attr('class', 'd3-tip')
 	  .offset([-10, 0])
 	  .html(function(d) {
-	    return "<strong>"+query+":</strong> <span style='color:red'>" + d.frequency + "</span>";
+	    return "<strong>"+query+":</strong> <span style='color:white'>" + d.frequency + "</span><br>"+d.showText;
 	  })
 	var svg = d3.select(".charting").append("svg")
 		.attr("class", "bigGraph")
@@ -38,11 +38,11 @@ function barChartsWrap(query)
 	  .append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 	svg.call(tip);
-	d3.tsv("data/"+selectedquery+".tsv", type, function(error, data) {
+	d3.csv("data/"+selectedquery+".csv", type, function(error, data) {
 	  if (error) throw error;
 
 	  x.domain(data.map(function(d) { return d.letter; }));
-	  y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
+	  y.domain([0, d3.max(data, function(d) { console.log(d); return d.frequency; })]);
 
 	  svg.append("g")
 		  .attr("class", "x axis")
@@ -72,19 +72,6 @@ function barChartsWrap(query)
 		  .attr("height", function(d) { return height - y(d.frequency); }).on("click", click)
 		  .on('mouseover', tip.show)
       	  .on('mouseout', tip.hide);
-		/*switch (selectedquery){
-			case "topscorer":
-				svg.selectAll(".bar").style("fill", "#e7298a");
-				break;
-			case "attendance":
-				svg.selectAll(".bar").style("fill", "#3690c0");
-				break;
-			case "wcgoals":
-				svg.selectAll(".bar").style("fill", "#ec7014");
-				break;
-			default:
-				break;
-		}*/
 		
 	});
 
