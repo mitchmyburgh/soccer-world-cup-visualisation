@@ -66,8 +66,8 @@ function barChartsWrap(query)
 		  .data(data)
 		.enter().append("rect")
 		  .attr("class", "bar "+selectedquery)
-		  .attr("x", function(d) { return x(d.letter); })
-		  .attr("width", x.rangeBand())
+		  .attr("x", function(d) { return x(d.letter)+5; })
+		  .attr("width", x.rangeBand()-10)
 		  .attr("y", function(d) { return y(d.frequency); })
 		  .attr("height", function(d) { return height - y(d.frequency); }).on("click", click)
 		  .on('mouseover', tip.show)
@@ -106,7 +106,7 @@ function barChartsWrap(query)
 
 
 	var ele = document.createElement("canvas");
-	ele.setAttribute("height","300");
+	ele.setAttribute("height","500");
 	ele.setAttribute("width","950");
 	ele.setAttribute("id","wrapper"+theName);
 
