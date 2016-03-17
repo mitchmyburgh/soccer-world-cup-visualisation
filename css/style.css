@@ -73,11 +73,11 @@ path.link {
 /* Overview */
 /* Champion */
 #champion {
-	background-color: #40004b;
+	background-color: #640075;
 }
 /* finalist */
 #finalist {
-	background-color: #762a83;
+	background-color: #8a329a;
 }
 /* semifinalist */
 #semifinalist {
@@ -89,11 +89,11 @@ path.link {
 }
 /* last16 */
 #last16 {
-	background-color: #1b7837;
+	background-color: #1f893f;
 }
 /* groupstage */
 #groupstage {
-	background-color: #00441b;
+	background-color: #006629;
 }
 /* host */
 #host {
