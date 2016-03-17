@@ -32,6 +32,7 @@ function barChartsWrap(query)
 	    return "<strong>"+query+":</strong> <span style='color:red'>" + d.frequency + "</span>";
 	  })
 	var svg = d3.select(".charting").append("svg")
+		.attr("class", "bigGraph")
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
 	  .append("g")
@@ -93,23 +94,26 @@ function barChartsWrap(query)
 	}
 
 	function click (d) {
-		
 		if(selectedquery=="wcgoals")
 		{
-			console.log(clicked);
 			if(clicked[d.letter]==true)
 			{
 				clicked[d.letter]=null;
+				//d3.select(this).style("fill", "#ec7014");
+				d3.select(this).classed("clickedBigBarGraph", false )
+				console.log(d3.select(this).attr("class"));
 				document.getElementById('output').removeChild(document.getElementById('aWrapper'+d.letter));
 			}
 			else
 			{
 				clicked[d.letter]=true;
+				var quickClass = d3.select(this).attr("class") + " clickedBigBarGraph"
+				d3.select(this).classed("clickedBigBarGraph", true )//.style("fill", "url(#pattern-stripe-goalsScored)");//.attr("class", quickClass)//.style("fill", "url(#pattern-stripe-goalsScored)");//.attr('fill', 'url(#pattern-stripe-goalsScored)')
+				console.log(d3.select(this).attr("class"));
 				wrapperFunction(d.letter);
 			}
 		}
 	}
-
 
 	function wrapperFunction(WrapperName)
 	{
@@ -117,8 +121,8 @@ function barChartsWrap(query)
 
 
 	var ele = document.createElement("canvas");
-	ele.setAttribute("height","500");
-	ele.setAttribute("width","500");
+	ele.setAttribute("height","300");
+	ele.setAttribute("width","950");
 	ele.setAttribute("id","wrapper"+theName);
 
 
@@ -128,7 +132,7 @@ function barChartsWrap(query)
 	theTitle.innerText=theName;
 	var elements = document.createElement("div");
 	elements.setAttribute("id","aWrapper"+theName);
-	elements.setAttribute("width","30%");
+	elements.setAttribute("width","100%");
 	elements.setAttribute("style","display:inline-block");
 	elements.appendChild(theTitle);
 	output.appendChild(elements);
@@ -147,7 +151,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [15,18,7,7,5,5,4,3,1,1,0,0,4]
 					}
@@ -161,7 +165,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [11,9,11,7,4,5,5,4,2,2,2,1,2,1,2,1]
 					}
@@ -174,7 +178,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [11,15,12,11,4,4,1,3,3,1,5,1,1,0,0]
 					}
@@ -188,7 +192,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [15,22,11,10,7,4,4,2,5,4,2,2,0]
 					}
@@ -201,7 +205,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [25,27,17,16,11,8,8,2,10,6,3,5,2,0,0,0]
 					}
@@ -214,7 +218,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [16,12,23,12,5,5,6,7,9,7,4,9,5,4,2,1]
 					}
@@ -228,7 +232,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [14,7,10,10,8,9,4,5,3,2,3,4,2,5,1,2]
 					}
@@ -242,7 +246,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [11,15,17,10,4,8,2,5,2,4,4,1,2,2,1,1]
 					}
@@ -255,7 +259,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [19,10,17,4,6,6,9,4,2,4,4,1,5,2,2,0]
 					}
@@ -268,7 +272,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [13,15,16,6,7,5,12,9,3,5,1,2,1,0,2,0]
 					
@@ -281,7 +285,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [15,15,10,9,6,10,7,7,3,2,5,5,1,2,3,2]
 					}
@@ -295,7 +299,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [12,12,11,16,15,6,7,5,5,3,8,4,5,12,8,2,1,2,2,2,2,3,2,1]
 					}
@@ -310,7 +314,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [14,8,12,12,10,6,11,7,10,12,3,5,4,1,2,2,2,2,1,4,2,1,1,0]
 					}
@@ -323,7 +327,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [15,5,10,8,8,10,7,2,4,6,6,4,4,4,3,2,4,2,2,1,3,1,2,2]
 					}
@@ -336,7 +340,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [11,8,15,10,9,10,8,10,7,8,4,5,4,3,5,2,1,7,4,4,1,3,2,0]
 					}
@@ -349,7 +353,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [15,14,11,13,8,10,8,9,7,5,4,6,8,3,5,5,8,5,3,2,1,3,3,3,2,1,2,2,1,2,1,1]
 					}
@@ -362,7 +366,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [18,14,10,8,10,6,7,7,5,5,4,6,5,6,5,6,5,2,5,2,6,4,2,2,3,4,1,0,1,2,0,0]
 					}
@@ -375,7 +379,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [12,9,14,7,10,11,6,5,9,4,3,5,4,3,5,5,3,2,5,3,2,2,1,3,2,2,0,2,2,1,3,2]
 					}
@@ -388,7 +392,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [8,12,16,11,10,9,5,3,4,3,7,5,3,4,6,5,4,3,1,3,3,2,2,3,2,4,3,0,1,0,2,1]
 					}
@@ -401,7 +405,7 @@ function barChartsWrap(query)
 					{
 						fillColor : "#fec44f",
 						strokeColor : "rgba(151,187,205,0.8)",
-						highlightFill : "rgba(151,187,205,0.75)",
+						highlightFill : "#993404",
 						highlightStroke : "rgba(151,187,205,1)",
 						data : [19,16,17,11,12,12,10,9,7,7,6,6,5,4,4,4,4,4,3,3,3,3,3,2,1,1,1,1,1,0,0,0]
 					}

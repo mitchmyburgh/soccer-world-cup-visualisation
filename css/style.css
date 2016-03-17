@@ -199,7 +199,6 @@ path.link {
 .bar.wcgoals {
   fill: #ec7014;
 }
-
 .bar.attendance {
   fill: #3690c0;
 }
@@ -214,6 +213,12 @@ path.link {
 
 .bar.attendance:hover {
   fill: #023858;
+}
+
+
+
+.bar.wcgoals.clickedBigBarGraph:hover {
+  fill: #662506;
 }
 
 .axis path,

@@ -87,8 +87,6 @@ var attendanceMapDisp = function(){
 var goalsScoredMapDisp = function(){
   var newMap = jQuery.extend(true, {}, cleanMap);
   for (var i = 0; i < goalsScoredMap.length; i ++){
-    console.log(goalsScoredMap[i].country);
-    console.log(goalsScoredMap[i].fillKey);
     newMap[goalsScoredMap[i].country].fillKey = goalsScoredMap[i].fillKey;
   }
   world.updateChoropleth(newMap);

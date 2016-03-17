@@ -75,8 +75,6 @@ var updateOverviewByYear = function (year, collapsed) {
 		case "top_scorer":
 			if (ScorerByYear[year]){
 				for (var i = 0; i < ScorerByYear[year].length; i ++){
-					console.log(ScorerByYear[year][i].country);
-					console.log(ScorerByYear[year][i].fillKey);
 					newMap[ScorerByYear[year][i].country].fillKey = ScorerByYear[year][i].fillKey;
 				}
 				world.updateChoropleth(newMap);
