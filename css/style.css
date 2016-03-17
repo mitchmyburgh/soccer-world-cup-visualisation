@@ -20,7 +20,10 @@ body {
   stroke: steelblue;
   stroke-width: 1.5px;
 }
-
+.timelineTrophy {
+  color: black;
+  display: inline-block;
+}
 .node text {
   font: 10px sans-serif;
 }

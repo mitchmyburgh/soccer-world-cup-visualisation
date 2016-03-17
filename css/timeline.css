@@ -15,14 +15,14 @@ transform:scale(0.7);
 .node img {width: 40px; padding: 5px;
     margin-left:auto;
     margin-right:auto;}
-.node img:nth-child(1) {margin-left: 20px}
-.node img:nth-child(3) {width: 80px}
+.node img:nth-child(2) {margin-left: 20px}
+.node img:nth-child(4) {width: 80px}
 .node.main-date { width: 10px; height: 10px; border-radius: 50%; }
 .node.main-date p.node-name { top: -15px; font-size: 15px; position: absolute; opacity: 0; z-index: -1; left: -30px; transition: top 1s, opacity 1s; }
 .node.main-date:hover p.node-name { opacity: 1; top: -25px; }
 
 .Treant .collapse-switch { width: 100%; height: 100%; border: none; }
-.Treant .node.collapsed { background-color: #D7F5FF; color: #827A7A; }
+.Treant .node.collapsed { background-color: #D7F5FF; color: #fff;}
 .Treant .node.collapsed .collapse-switch { background: none; }
 .node.rootnode { color: #fff;}
 

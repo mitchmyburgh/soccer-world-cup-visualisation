@@ -826,7 +826,7 @@
 		this.image = nodeStructure.image;
 		this.image2 = nodeStructure.image2;
 
-		this.tooltip = nodeStructure.tooltip;
+		this.showHost = nodeStructure.showHost;
 		this.tooltip2 = nodeStructure.tooltip2;
 		this.year = nodeStructure.text.name;
 		if (nodeStructure.callOnClick) {
@@ -1137,6 +1137,11 @@
 
 					image.src = this.image;
 					image.title="Hello world";
+					var fa = document.createElement('span');
+					fa.setAttribute("class", "icon-soccer-court timelineTrophy");
+					if (this.showHost){
+					node.appendChild(fa);
+				}
 					node.appendChild(image);
 					node.appendChild(document.createElement('br'));
 				}
