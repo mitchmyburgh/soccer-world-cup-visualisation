@@ -42,7 +42,7 @@ function barChartsWrap(query)
 	  if (error) throw error;
 
 	  x.domain(data.map(function(d) { return d.letter; }));
-	  y.domain([0, d3.max(data, function(d) { console.log(d); return d.frequency; })]);
+	  y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
 
 	  svg.append("g")
 		  .attr("class", "x axis")
@@ -88,7 +88,6 @@ function barChartsWrap(query)
 				clicked[d.letter]=null;
 				//d3.select(this).style("fill", "#ec7014");
 				d3.select(this).classed("clickedBigBarGraph", false )
-				console.log(d3.select(this).attr("class"));
 				document.getElementById('output').removeChild(document.getElementById('aWrapper'+d.letter));
 			}
 			else
@@ -96,7 +95,6 @@ function barChartsWrap(query)
 				clicked[d.letter]=true;
 				var quickClass = d3.select(this).attr("class") + " clickedBigBarGraph"
 				d3.select(this).classed("clickedBigBarGraph", true )//.style("fill", "url(#pattern-stripe-goalsScored)");//.attr("class", quickClass)//.style("fill", "url(#pattern-stripe-goalsScored)");//.attr('fill', 'url(#pattern-stripe-goalsScored)')
-				console.log(d3.select(this).attr("class"));
 				wrapperFunction(d.letter);
 			}
 		}
@@ -486,7 +484,6 @@ function barChartsWrap(query)
 						responsive: true,
 					barShowStroke: false
 					});
-					console.log(JSON.stringify(WCTwelveGoals.datasets));
 			}
 			if(WrapperName=="1986")
 			{

@@ -14,6 +14,7 @@ var world = new Datamap({
   },
   fills: {
     defaultFill: "#d3d3d3",
+    defaultFill2: "#868686",
     //overview
     champion: "#40004b",
     finalist: "#762a83",
