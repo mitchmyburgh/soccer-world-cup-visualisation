@@ -402,6 +402,8 @@ function barChartsWrap(query)
 
 			};
 			window.onload = function(){
+			Chart.defaults.global.scaleLineColor = "#fff";
+			Chart.defaults.global.scaleFontColor = "#fff";
 			var ctx = document.getElementById("wrapper"+WrapperName).getContext("2d");
 			if(WrapperName=="1930")
 			{

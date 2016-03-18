@@ -1,3 +1,4 @@
+
 var world = new Datamap({
   element: document.getElementById("world"),
   projection: 'mercator',
@@ -13,7 +14,7 @@ var world = new Datamap({
     highlightBorderWidth: 3,
   },
   fills: {
-    defaultFill: "#d3d3d3",
+    defaultFill: "#acacac",
     defaultFill2: "#868686",
     //overview
     champion: "#640075",
@@ -98,6 +99,52 @@ var topScorerMapDisp = function(){
   var newMap = jQuery.extend(true, {}, cleanMap);
   for (var i = 0; i < topScorerMap.length; i ++){
     newMap[topScorerMap[i].country].fillKey = topScorerMap[i].fillKey;
+  }
+  world.updateChoropleth(newMap);
+  newMap=null;
+}
+
+var overviewMapFilter = function (filter_key, host) {
+  var newMap = jQuery.extend(true, {}, cleanMap);
+  for (var i = 0; i < overviewMap.length; i ++){
+    if (!host && overviewMap[i].fillKey.startsWith(filter_key)){
+      newMap[overviewMap[i].country].fillKey = overviewMap[i].fillKey;
+    } else if (host && overviewMap[i].fillKey.endsWith(filter_key)) {
+      newMap[overviewMap[i].country].fillKey = overviewMap[i].fillKey;
+    }
+  }
+  world.updateChoropleth(newMap);
+  newMap=null;
+}
+
+var goalsScoredMapFilter = function (filter_key) {
+  var newMap = jQuery.extend(true, {}, cleanMap);
+  for (var i = 0; i < goalsScoredMap.length; i ++){
+    if (goalsScoredMap[i].fillKey == filter_key){
+      newMap[goalsScoredMap[i].country].fillKey = goalsScoredMap[i].fillKey;
+    }
+  }
+  world.updateChoropleth(newMap);
+  newMap=null;
+}
+
+var attendanceMapFilter = function (filter_key) {
+  var newMap = jQuery.extend(true, {}, cleanMap);
+  for (var i = 0; i < attendanceMap.length; i ++){
+    if (attendanceMap[i].fillKey == filter_key){
+      newMap[attendanceMap[i].country].fillKey = attendanceMap[i].fillKey;
+    }
+  }
+  world.updateChoropleth(newMap);
+  newMap=null;
+}
+
+var topScorerMapFilter = function (filter_key) {
+  var newMap = jQuery.extend(true, {}, cleanMap);
+  for (var i = 0; i < topScorerMap.length; i ++){
+    if (topScorerMap[i].fillKey == filter_key){
+      newMap[topScorerMap[i].country].fillKey = topScorerMap[i].fillKey;
+    }
   }
   world.updateChoropleth(newMap);
   newMap=null;

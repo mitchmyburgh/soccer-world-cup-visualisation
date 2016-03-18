@@ -5,6 +5,67 @@ $(function () {
 
 	//launch the overview map
 	overviewMapDisp();
+	$('.keyBlockHover').hover(function () {
+		switch ($('input[name=filter]:checked', '#filterForm').val()) {
+			case "overview":
+				if ($(this).attr('id') == "host"){
+					overviewMapFilter("AndHost", true);
+				} else {
+					overviewMapFilter($(this).attr('id'), false);
+				}
+
+				break;
+			case "goals_scored":
+				goalsScoredMapFilter($(this).attr('id'));
+				break;
+			case "top_scorer":
+				topScorerMapFilter($(this).attr('id'));
+				break;
+			case "attendance":
+				attendanceMapFilter($(this).attr('id'));
+				break;
+			default:
+				break;
+		}
+	}, function () {
+		switch ($('input[name=filter]:checked', '#filterForm').val()) {
+			case "overview":
+				overviewMapDisp();
+				break;
+			case "goals_scored":
+				goalsScoredMapDisp();
+				break;
+			case "top_scorer":
+				topScorerMapDisp();
+				break;
+			case "attendance":
+				attendanceMapDisp();
+				break;
+			default:
+				break;
+		}
+	});
+	/*
+	switch ($('input[name=filter]:checked', '#filterForm').val()) {
+		case "overview":
+			break;
+		case "goals_scored":
+			var newMap = jQuery.extend(true, {}, cleanMap);
+			for (var i = 0; i < goalsScoredMap.length; i ++){
+				if (goalsScoredMap[i].fillKey == $('.keyBlockEasy').attr('id')){
+					newMap[goalsScoredMap[i].country].fillKey = goalsScoredMap[i].fillKey;
+				}
+			}
+			world.updateChoropleth(newMap);
+			newMap=null;
+			break;
+		case "top_scorer":
+			break;
+		case "attendance":
+			break;
+		default:
+			break;
+			*/
 
 	// display the correct map on radio button click
 	$('#filterForm input').on('change', function() {
