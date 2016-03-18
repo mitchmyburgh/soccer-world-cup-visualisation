@@ -47,11 +47,13 @@ function barChartsWrap(query)
 	  svg.append("g")
 		  .attr("class", "x axis")
 		  .style("fill", "#fff")
-		  .attr("transform", "translate(0," + height + ")")
+		  .style("font-size", "12px")
+		  .attr("transform", "translate(0," + (height) + ")")
 		  .call(xAxis);
 
 	  svg.append("g")
 		  .attr("class", "y axis")
+		  .style("font-size", "12px")
 		  .style("fill", "#fff")
 		  .call(yAxis)
 		.append("text")
@@ -60,6 +62,7 @@ function barChartsWrap(query)
 		  .attr("dy", ".71em")
 		  .style("text-anchor", "end")
 		  .style("fill", "#fff")
+		  .style("font-size", "20px")
 		  .text(query);
 
 	  svg.selectAll(".bar")

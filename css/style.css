@@ -170,26 +170,32 @@ label {
 /* 5 - 9 */
 #goalsScored2 {
 	background-color: #fec44f;
+	width: 45px;
 }
 /* 10-19 */
 #goalsScored3 {
 	background-color: #fe9929;
+	width: 50px;
 }
 /* 20-39 */
 #goalsScored4 {
 	background-color: #ec7014;
+	width: 55px;
 }
 /* 40 - 79*/
 #goalsScored5 {
 	background-color: #cc4c02;
+	width: 60px;
 }
 /* 80 - 159*/
 #goalsScored6 {
 	background-color: #993404;
+	width: 65px;
 }
 /* 160 + */
 #goalsScored7 {
 	background-color: #662506;
+	width: 70px;
 }
 
 /* top scorer */
@@ -251,7 +257,7 @@ label {
 .axis path,
 .axis line {
   fill: none;
-  stroke: #000;
+  stroke: #fff;
   shape-rendering: crispEdges;
 }
 
@@ -259,13 +265,15 @@ label {
   display: none;
 }
 
-	#xaxis2 .domain {
-		fill:none;
-		stroke:#000;
-	}
-	#xaxis text, #yaxis text {
-		font-size: 12px;
-	}
+#xaxis2 .domain {
+	fill:none;
+	stroke:#fff;
+}
+#xaxis text, 
+#yaxis text {
+	font-color: #fff;
+	font-size: 100px;
+}
 
 .sidegraph {
 	fill: steelblue;
@@ -313,4 +321,8 @@ label {
 
 .tinyFlag {
 	width: 20px;
+}
+
+.selection_button_spacing {
+	padding-right: 20px;
 }
