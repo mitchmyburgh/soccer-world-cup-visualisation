@@ -1,31 +1,112 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
 
-  <title>World Cup Visualisation - Write Up</title>
-  <meta name="description" content="D3 Visualisation of World Cup Data">
-  <meta name="author" content="Tumelo, Roscoe and Mitch">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Soccer World Cup Visualisation Writeup">
+    <meta name="author" content="Mitch, Tumelo and Roscoe">
 
-  <!-- Bootstrap -->
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <title>Soccer World Cup Visualisation Writeup</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-  <!--<link rel="stylesheet" href="css/styles.css?v=1.0">-->
+    <!-- Custom CSS -->
+    <link href="css/writeup.css" rel="stylesheet">
 
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 
 <body>
-  <h1>World Cup Visualisation - Write Up</h1>
 
-  <!-- Bootstrap -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Soccer World Cup Visualisation Writeup</a>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a href="#int" class="list-group-item">Introduction</a>
+                    <a href="#lit" class="list-group-item">Literature Review</a>
+                    <a href="#quer" class="list-group-item">Visual Queries Supported</a>
+                    <a href="#data" class="list-group-item">Data</a>
+                    <a href="#design" class="list-group-item">Description of Design</a>
+                    <a href="#sw" class="list-group-item">Strengths and Weaknesses of Design</a>
+                    <a href="#con" class="list-group-item">Conclusion and Future Work</a>
+                    <a href="#who" class="list-group-item">Who did What</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div id="title">
+                    <h1>World Cup Visualisation - Write Up</h1>
+                </div>
+                <div id="int">
+                    <h2>Introduction</h2>
+                </div>
+                <div id="lit">
+                    <h2>Literature Review</h2>
+                </div>
+                <div id="quer">
+                    <h2>Visual Queries Supported</h2>
+                </div>
+                <div id="data">
+                    <h2>Data</h2>
+                    <p>
+                        The data used for the visualistion was taken from Wikipedia and the <a href="https://github.com/openfootball/world-cup">openfootball</a>[] Github repository. The data from openfootball was the initial dataset but due to the difficulty of parsing the data (as the data was in structured text format and different years had slightly differently structured data).
+                    </p>
+                </div>
+                <div id="design">
+                    <h2>Description of Design</h2>
+                </div>
+                <div id="sw">
+                    <h2>Strengths and Weaknesses of Design</h2>
+                </div>
+                <div id="con">
+                    <h2>Conclusion and Future Work</h2>
+                </div>
+                <div id="who">
+                    <h2>Who did What</h2>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap -->
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
