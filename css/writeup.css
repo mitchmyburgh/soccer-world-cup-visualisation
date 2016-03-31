@@ -30,3 +30,27 @@ body {
 footer {
     margin: 50px 0;
 }
+
+ol {
+  counter-reset: o-counter;
+  list-style-type: none;
+}
+ol li:before {
+  content: '[' counter(o-counter) ']   ';
+  counter-increment: o-counter;
+}
+img {
+  width: 400px;
+}
+figure {
+  margin-bottom: 20px;
+  text-align: center;
+}
+/*.img-left {
+  float: left;
+  margin-right: 20px;
+}
+.img-right {
+  float: right;
+  margin-left: 20px
+}*/
