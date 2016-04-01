@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+	#xaxis2 .domain {
+		fill:none;
+		stroke:#000;
+	}
+	#xaxis text, #yaxis text {
+		font-size: 12px;
+	}
+
+.sidegraph {
+	fill: steelblue;
+	}
+</style>
+<body>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="http:/d3js.org/d3.v3.min.js"></script>
+<script src="http://www.chartjs.org/assets/Chart.min.js"></script>
+<script src="Chart.HorizontalBar.js"></script>
+<div class="theCharts" style="max-width: 960px;">
+<div class="charting" style="display:block;"></div>
+<div id="output"></div>
+</div>
+<script src="bar_charts.js"></script>
+<script>
+barChartsWrap("World cup goals");
+</script>
+
+</body>
+
+

@@ -1,0 +1,210 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>World Cup Visualisation</title>
+  <meta name="description" content="D3 Visualisation of World Cup Data">
+  <meta name="author" content="Tumelo, Roscoe and Mitch">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/font/style.css"></head>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/Treant.css">
+  <link rel="stylesheet" href="css/timeline.css">
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body onload="filterForm.reset();">
+  <h1 id="header">Soccer World Cup Visualisation</h1>
+  <div class= "container">
+    <div id="map">
+      <form id="filterForm">
+        <input type="radio" name="filter" id="overview" value="overview" checked> <label for="overview">Overview</label>
+        <input type="radio" name="filter" id="goals_scored" value="goals_scored"> <label for="goals_scored">Goals Scored</label>
+        <input type="radio" name="filter" id="top_scorer" value="top_scorer"> <label for="top_scorer">Top Scorer</label>
+        <input type="radio" name="filter" id="attendance" value="attendance"> <label for="attendance">Attendance</label>
+      </form>
+      <div id="worldAndKey">
+        <div id="world" style="position: relative; width: 700px; height: 400px;"></div>
+        <div id="key">
+          <div id="overviewKey">
+            <h3>Key (Highest Ranking)</h3>
+            <div id="champion" class="keyblock"></div> <label for="champion">Champion</label> <br>
+            <div id="finalist" class="keyblock"></div> <label for="finalist">Finalist</label> <br>
+            <div id="semifinalist" class="keyblock"></div> <label for="semifinalist">Semi-Finalist</label> <br>
+            <div id="quarterfinalist" class="keyblock"></div> <label for="quarterfinalist">Quarter-Finalist</label> <br>
+            <div id="last16" class="keyblock"></div> <label for="last16">Last 16</label> <br>
+            <div id="groupstage" class="keyblock"></div> <label for="groupstage">Group Stage</label> <br>
+            <div id="host" class="keyblock"></div> <label for="host">Host</label>
+          </div>
+          <div id="goalsScoredKey" style="display: none">
+            <h3>Key (Number Goals Scored)</h3>
+            <div id="goalsScored1" class="keyblock"></div> <label for="goalsScored1">0 - 4</label> <br>
+            <div id="goalsScored2" class="keyblock"></div> <label for="goalsScored2">5 - 9</label> <br>
+            <div id="goalsScored3" class="keyblock"></div> <label for="goalsScored3">10 - 19</label> <br>
+            <div id="goalsScored4" class="keyblock"></div> <label for="goalsScored4">20 - 39</label> <br>
+            <div id="goalsScored5" class="keyblock"></div> <label for="goalsScored5">40 - 79</label> <br>
+            <div id="goalsScored6" class="keyblock"></div> <label for="goalsScored6">80 - 159</label> <br>
+            <div id="goalsScored7" class="keyblock"></div> <label for="goalsScored7">160 +</label>
+          </div>
+          <div id="topScorerKey" style="display: none">
+            <h3>Key (Number Top Scorers)</h3>
+            <div id="topScorer1" class="keyblock"></div> <label for="topScorer1">1</label> <br>
+            <div id="topScorer2" class="keyblock"></div> <label for="topScorer2">2</label> <br>
+            <div id="topScorer3" class="keyblock"></div> <label for="topScorer3">3</label> <br>
+            <div id="topScorer4" class="keyblock"></div> <label for="topScorer4">4</label> <br>
+            <div id="topScorer5" class="keyblock"></div> <label for="topScorer5">5</label>
+          </div>
+          <div id="attendanceKey" style="display: none">
+            <h3>Key (Number People Attending)</h3>
+            <div id="attendance1" class="keyblock"></div> <label for="attendance1">0 - 499,999</label> <br>
+            <div id="attendance2" class="keyblock"></div> <label for="attendance2">500,000 - 999,999</label> <br>
+            <div id="attendance3" class="keyblock"></div> <label for="attendance3">1,000,000 - 1,499,999</label> <br>
+            <div id="attendance4" class="keyblock"></div> <label for="attendance4">1,500,000 - 1,999,999</label> <br>
+            <div id="attendance5" class="keyblock"></div> <label for="attendance5">2,000,000 - 2,499,999</label> <br>
+            <div id="attendance6" class="keyblock"></div> <label for="attendance6">2,500,000 - 2,999,999</label> <br>
+            <div id="attendance7" class="keyblock"></div> <label for="attendance7">3,000,000 - 3,499,999</label> <br>
+            <div id="attendance8" class="keyblock"></div> <label for="attendance8">3,500,000 +</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--<div id="chart"></div>-->
+    <div class="chart shrink" id="OrganiseChart-simple">
+    </div>
+    <div id="tumelosShit">
+      <div class="theCharts" style="max-width: 960px;">
+      <div class="charting" id = "tumelosChart"style="display:block;"></div>
+      <div id="output"></div>
+      </div>
+    </div>
+  </div>
+  <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  <script src="js/datamaps.world.min.js"></script>
+  <script src="http://www.chartjs.org/assets/Chart.min.js"></script>
+  <script src="js/Chart.HorizontalBar.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  <script src="js/jquery.easing.js"></script>
+  <script src="js/raphael.js"></script>
+  <script src="js/Treant.js"></script>
+  <script src="js/map_data.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/bar_charts.js"></script>
+  <script src="js/controller.js"></script>
+  <script src="js/timeline.js"></script>
+  <!--<script src="js/timeline_and_tree.js"></script>-->
+  <script>
+    new Treant( simple_chart_config );
+  </script>
+  <svg>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+     <!-- champion and host -->
+     <defs>
+       <pattern id="championAndHost"
+         width="4" height="3"
+         patternUnits="userSpaceOnUse">
+
+         <line x1="0" y1="2" x2="4" y2="2" stroke="#40004b" />
+       </pattern>
+     </defs>
+
+     <!-- finalist and host -->
+     <defs>
+       <pattern id="finalistAndHost"
+         width="4" height="3"
+         patternUnits="userSpaceOnUse">
+
+         <line x1="0" y1="2" x2="4" y2="2" stroke="#762a83" />
+       </pattern>
+     </defs>
+
+     <!-- semifinalist and host -->
+     <defs>
+       <pattern id="semifinalistAndHost"
+         width="4" height="3"
+         patternUnits="userSpaceOnUse">
+
+         <line x1="0" y1="2" x2="4" y2="2" stroke="#9970ab" />
+       </pattern>
+     </defs>
+
+     <!-- quarterfinalist and host -->
+     <defs>
+       <pattern id="quarterfinalistAndHost"
+         width="4" height="3"
+         patternUnits="userSpaceOnUse">
+
+         <line x1="0" y1="2" x2="4" y2="2" stroke="#5aae61" />
+       </pattern>
+     </defs>
+
+     <!-- last16 and host -->
+     <defs>
+       <pattern id="last16AndHost"
+         width="4" height="3"
+         patternUnits="userSpaceOnUse">
+
+         <line x1="0" y1="2" x2="4" y2="2" stroke="#1b7837" />
+       </pattern>
+     </defs>
+
+     <!-- groupstages and host -->
+     <defs>
+       <pattern id="groupstagesAndHost"
+         width="4" height="3"
+         patternUnits="userSpaceOnUse">
+
+         <line x1="0" y1="2" x2="4" y2="2" stroke="#00441b" />
+       </pattern>
+     </defs>
+
+    <!-- Horizontal Stripe pattern -->
+    <defs>
+      <pattern id="horizontal-stripe"
+        width="4" height="4"
+        patternUnits="userSpaceOnUse">
+
+        <line x1="0" y1="2" x2="4" y2="2" stroke="blue" />
+        <line x1="2" y1="0" x2="2" y2="4" stroke="green" />
+      </pattern>
+    </defs>
+    <!-- Vertical Stripe pattern -->
+    <!-- Vertical Stripe pattern -->
+    <defs>
+       <pattern id="vertical-stripe"
+         width="4" height="4"
+         patternUnits="userSpaceOnUse">
+
+          <line x1="2" y1="0" x2="2" y2="4" stroke="green" />
+        </pattern>
+    </defs>
+    <!-- Diagonal Stripe Pattern -->
+    <defs>
+    <pattern id="pattern-stripe-goalsScored" 
+          width="4" height="4" 
+          patternUnits="userSpaceOnUse"
+          patternTransform="rotate(45)">
+          <rect width="2" height="4" transform="translate(0,0)" fill="#fe9929"></rect>
+        </pattern>
+        <mask id="mask-stripe-goalsScored">
+          <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-stripe-goalsScored)" />
+        </mask> 
+    </defs>
+  </svg>
+  <style> 
+    .bar.wcgoals.clickedBigBarGraph {
+      fill: url(#pattern-stripe-goalsScored);
+    }
+  </style>
+</body>
+</html>

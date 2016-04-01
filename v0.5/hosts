@@ -1,0 +1,18 @@
+var hosts = {"attendance":[	
+	{country: "URY",  fillKey: "championAndHost"},
+	{country: "ITA",  fillKey: "championAndHost"},
+	{country: "FRA",  fillKey: "championAndHost"},
+	{country: "BRA",  fillKey: "championAndHost"},
+	{country: "DEU",  fillKey: "championAndHost"},
+	{country: "ARG",  fillKey: "championAndHost"},
+	{country: "ESP",  fillKey: "championAndHost"},
+	{country: "GBR",  fillKey: "championAndHost"},
+	{country: "USA",  fillKey: "semifinalistAndHost"},
+	{country: "MEX",  fillKey: "quarterfinalistAndHost"},
+	{country: "CHE",  fillKey: "quarterfinalistAndHost"},
+	{country: "SWE",  fillKey: "finalistAndHost"},
+	{country: "CHL",  fillKey: "semifinalistAndHost"},
+	{country: "KOR",  fillKey: "semifinalistAndHost"},
+	{country: "JPN",  fillKey: "last16AndHost"},
+	{country: "ZAF",  fillKey: "groupstagesAndHost"},
+]}

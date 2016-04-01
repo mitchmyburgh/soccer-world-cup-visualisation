@@ -1,0 +1,289 @@
+body {
+  background-color: #fff;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.container {
+	position: absolute;
+  	margin-left: calc((100% - 960px)/2);
+	background-color: #222222;
+	width: 960px;
+}
+
+.node circle {
+  cursor: pointer;
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 10px sans-serif;
+}
+
+path.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+#header {
+	text-align: center;
+	color: #000;
+	padding: 30px;
+}
+/* Map */
+#map {
+	border-style: 5px solid red;
+}
+#worldAndKey {
+	display: inline-flex;
+}
+#world {
+	display: inline-block;
+	background-color: #222222;
+	margin: auto 0px;
+}
+
+#key {
+	display: inline-block;
+	background-color: #222222;
+	color: #fff;
+	padding: 0px 30px 30px 30px;
+	margin-top: -20px;
+	margin: auto 0px;
+	height: 370px;
+	width: 200px;
+}
+
+#filterForm {
+	display: inline-block;
+	text-align: center;
+	color: #fff;
+	background-color: #222222;
+	width: 900px;
+	padding: 30px;
+}
+/* Key for map */
+.keyblock {
+  width: 40px;
+	height: 40px;
+	display: inline-block;
+}
+/* Overview */
+/* Champion */
+#champion {
+	background-color: #40004b;
+}
+/* finalist */
+#finalist {
+	background-color: #762a83;
+}
+/* semifinalist */
+#semifinalist {
+	background-color: #9970ab;
+}
+/* quarterfinalist */
+#quarterfinalist {
+	background-color: #5aae61;
+}
+/* last16 */
+#last16 {
+	background-color: #1b7837;
+}
+/* groupstage */
+#groupstage {
+	background-color: #00441b;
+}
+/* host */
+#host {
+	background-image: url(https://www.xmple.com/wallpaper/black-streaks-stripes-lines-white-1920x1080-c2-fff0f5-000000-l2-102-204-a-0-f-1.svg);
+	background-size: cover;
+}
+
+/* attendance */
+/* 0 - 499,999 */
+#attendance1 {
+	background-color: #ece7f2;
+}
+/* 500,000 - 999,999 */
+#attendance2 {
+	background-color: #d0d1e6;
+}
+/* 1,000,000 - 1,499,999 */
+#attendance3 {
+	background-color: #a6bddb;
+}
+/* 1,500,000 - 1,999,999 */
+#attendance4 {
+	background-color: #74a9cf;
+}
+/* 2,000,000 - 2,499,999 */
+#attendance5 {
+	background-color: #3690c0;
+}
+/* 2,500,000 - 2,999,999 */
+#attendance6 {
+	background-color: #0570b0;
+}
+/* 3,000,000 - 3,499,999 */
+#attendance7 {
+	background-color: #045a8d;
+}
+/* 3,500,000 + */
+#attendance8 {
+	background-color: #023858;
+}
+
+/* goals scored */
+/* 0 - 4 */
+#goalsScored1 {
+	background-color: #fee391;
+}
+/* 5 - 9 */
+#goalsScored2 {
+	background-color: #fec44f;
+}
+/* 10-19 */
+#goalsScored3 {
+	background-color: #fe9929;
+}
+/* 20-39 */
+#goalsScored4 {
+	background-color: #ec7014;
+}
+/* 40 - 79*/
+#goalsScored5 {
+	background-color: #cc4c02;
+}
+/* 80 - 159*/
+#goalsScored6 {
+	background-color: #993404;
+}
+/* 160 + */
+#goalsScored7 {
+	background-color: #662506;
+}
+
+/* top scorer */
+/* 1 */
+#topScorer1 {
+	background-color: #c994c7;
+}
+/* 2 */
+#topScorer2 {
+	background-color: #df65b0;
+}
+/* 3 */
+#topScorer3 {
+	background-color: #e7298a;
+}
+/* 4 */
+#topScorer4 {
+	background-color: #ce1256;
+}
+/* 5 */
+#topScorer5 {
+	background-color: #91003f;
+}
+/* Tumelos Stuff */
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.bar.topscorer {
+  fill: #e7298a;
+}
+
+.bar.wcgoals {
+  fill: #ec7014;
+}
+.bar.attendance {
+  fill: #3690c0;
+}
+
+.bar.topscorer:hover {
+  fill: #91003f;
+}
+
+.bar.wcgoals:hover {
+  fill: #662506;
+}
+
+.bar.attendance:hover {
+  fill: #023858;
+}
+
+
+
+.bar.wcgoals.clickedBigBarGraph:hover {
+  fill: #662506;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+	#xaxis2 .domain {
+		fill:none;
+		stroke:#000;
+	}
+	#xaxis text, #yaxis text {
+		font-size: 12px;
+	}
+
+.sidegraph {
+	fill: steelblue;
+	}
+
+.axis line {
+    fill: none;
+    stroke: #fff;
+    shape-rendering: crispEdges;
+}
+.smallGraphHeader {
+	color: #fff;
+	text-align: center;
+}
+
+/*tooltip tings*/
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.tinyFlag {
+	width: 20px;
+}

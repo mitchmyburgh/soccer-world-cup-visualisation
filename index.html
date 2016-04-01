@@ -59,6 +59,8 @@
                     <a href="#quer" class="list-group-item">Visual Queries Supported</a>
                     <a href="#data" class="list-group-item">Data</a>
                     <a href="#design" class="list-group-item">Description of Design</a>
+                    <a href="#design2" class="list-group-item">Design Decisions</a>
+                    <a href="#iter" class="list-group-item">Design Iterations</a>
                     <a href="#sw" class="list-group-item">Strengths and Weaknesses of Design</a>
                     <a href="#con" class="list-group-item">Conclusion and Future Work</a>
                     <a href="#who" class="list-group-item">Who did What</a>
@@ -242,6 +244,122 @@
                       <li>When a bar is in the graph is hovered over it shows the name and country of the top scorer in that world cup</li>
                     </ul>
                 </div>
+                <div id="design2">
+                    <h2>Design Decisions</h2>
+                    <p>Using the content and principles learned in the course our group gained a good understanding on how human beings perceive and process data being presented to them. This knowledge was used when making decisions on the design of our visualisation.</p>
+                    <h3>Map</h3>
+                    <p>As the Fifa soccer world cup is one of the largest events in the world involving a large number of countries the use of a world map was decided upon. This makes use of the user's pattern recognition abilities as he/she has to find the country they are interested in on the map. The use of the map also made it easy for the data pertaining to each country to be displayed and viewed which aids the answering of visual queries the user has.</p>
+                    <h3>Graphs</h3>
+                    <p>The map gives users an overview of the data but to allow the user to inspect the data more closely graphs were used. This allows the user to compare the data from each world cup with other world cups.</p>
+                    <h3>Timeline</h3>
+                    <p>A timeline was used to show all the world cups, the hosts and winners from 1930 to 2014. This was used as it represents tournaments that are held every four years and it allows users to see this and gather the necessary information from it with very little effort.</p>
+                    <h3>Tree</h3>
+                    <p>To represent the matches in a specific world cup a tree was used. This relies on the user's pattern recognition abilities as this design is used often to represent this type of data. It shows the progression of the winner through the competition and allows users to view data pertaining to single matches.</p>
+                    <h3>Colour</h3>
+                    <p>Different colour scales were used in each category of information, this was to help the user differentiate between the different categories quickly and easily. Most of the colours used are unique hues for humans.</p>
+                    <p>Colours for each category:</p>
+                    <ul>
+                      <li>Overview
+                        <ul>
+                          <li>Dark green to dark purple
+                          </li>
+                        </ul>
+                      </li>
+                      <li>Goals scored
+                        <ul>
+                          <li>Dark orange/red to light orange/yellow
+                          </li>
+                        </ul>
+                      </li>
+                      <li>Top Scorer
+                        <ul>
+                          <li>Dark pink to light pink
+                          </li>
+                        </ul>
+                      </li>
+                      <li>Attendance
+                        <ul>
+                          <li>Dark blue to light blue
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <p>The colours mentioned above were used on the map as well as the graphs to show that the data shown in both objects were related.</p>
+                    <p>For the background of the map a dark grey was used to create a chromatic contrast between the countries and the ocean, this made the lighter colours pop out and made the colour of each country easily identifiable to the user. The text on the grey background was made white to create a luminance contrast which made the text pop-out and easy to read.</p>
+                    <p>To make the visualisation more pleasing a green grass texture was used as a border. This ties in with the soccer theme and gives the user an idea of what the visualisation is about at first glance.</p>
+                    <h3>Texture</h3>
+                    <p>Textures are used on the map to differentiate host nations from other nations on the map. This was decided upon as it uses two visual channels (colour and texture) to give the user information on a specific country.</p>
+                    <h3>Symbols</h3>
+                    <p>Symbols were used throughout the visualization. This relies on the user’s pattern recognition ability as contours and gist of objects are used to help the user identify what the particular symbol means thus understanding what the data represented by the symbol means. The symbols used in the visualisation were:</p>
+                    <h4>Soccer pitch</h4>
+                    <p>A soccer pitch is used to represent information on host nations. </p>
+                    <h4>Trophy</h4>
+                    <p>A trophy was used to represent world cup winners.</p>
+                    <h4>Soccer Boot</h4>
+                    <p>This was used to represent top scorers in each tournament.</p>
+                    <h4>People</h4>
+                    <p>This was used to represent the attendance numbers at each tournament.</p>
+                    <h4>Flags</h4>
+                    <p>To make each the data pertaining to each country easily recognisable to the user the flags of each country was used. This relies on the user's ability to recognise these flags, the name of the country was also used in case the user is unable to recognise flags.</p>
+                </div>
+                <div id="iter">
+                    <h2>Design Iterations</h2>
+                    <p>We have gone through 3 design iterations in order to fine tune our visualisation to the point where it most conforms to the design principles. In order for us to create a visualisation which will allow the viewer to gain rapid access to multiple visual queries, while still maintaining cohesiveness, we made use of 3 visual elements, a map, timeline and a bar graph. These visual elements allowed us to represent data of the same subject in different ways, giving the viewer a holistic view of the subject. The subjects we represented were goals scored, top scorer and attendance.</p>
+                    <p>Through critiquing the design at each iteration, we managed to note problems with our design and come up with solutions for them.</p>
+                    <h3>Iteration 1</h3>
+                    <p>In order to reach our 1st formal design, we went through 3 other designs where we attempted to use various visual components in order to develop a visualisation which not only display multiple dimensions of data, but is also intuitive and represents the data best.</p>
+                    <p>We ended up going with this design since we felt the following attributes conformed to the design principles the best:</p>
+                    <ul>
+                      <li>Has multi dimensional data</li>
+                      <li>Countries competing in the world cup are distinguished on 2 visual channels in timeline (Flag and name)</li>
+                      <li>Use of recognisable symbols improves learnability (i.e. Trophy for winner)</li>
+                      <li>Use of occlusion makes information effectively noticeable (i.e. on Map hover over)</li>
+                      <li>Ability to compare the same visual query across different years (i.e. bar chart can be used to compare WC attendance in world cups)</li>
+                    </ul>
+                    <p>After further critiquing our designs , we noted several areas of improvement for it , namely:</p>
+                    <ul>
+                      <li>Having an overview map that lists all the teams that have competed in a world cup</li>
+                      <li>Solving the congestion issue in the map where in certain continents (i.e. Europe), many teams have competed in the world cup, making it hard to get an exact perspective on the competing teams</li>
+                      <li>The misleading representation of the attendance in countries that have hosted a world cup (the variance between the attendance figures leads to this)</li>
+                      <li>The orientation of the bar chart on the visualisation</li>
+                      <li>The lack of symbols on the bar chart</li>
+                    </ul>
+                    <p>We solved these problems the following way</p>
+                    <ul>
+                      <li>We improved the overview map to include a list of countries that have competed in the world cup</li>
+                      <li>We added a zoom feature in order to solve the problem of certain regions being cluttered</li>
+                      <li>We changed the attendance range from a continuous scale to a category based scale in order to effectively represent the data, with the exact figure shown on the hover over of the bar chart</li>
+                      <li>We changed the orientation of the bar chart, in order to make the information more easily retrievable</li>
+                      <li>We added symbols to the bar graph which are accessible on hovering over the graph</li>
+                      <li>We have reduced the clutter of information on the visualisation and made some of the information accessible through secondary gestures, i.e hovering over</li>
+                    </ul>
+                    <h3>Iteration 2</h3>
+                    <p>In our <a href="/v0.5/visualisation.html">second iteration</a>, we attempted to solve all the problems we noted from our first iteration. We aimed to refine our visualisation in the best way possible, however, we still noted several minor problems, namely:</p>
+                    <ul>
+                      <li>We had a high saturation of colours in  our overview map, which made the visualisation harder on the eyes and made it difficult to discern between the dark background with objects shaded in dark colours, due to the poor luminance contrast </li>
+                      <li>The years in the timeline had a low amount of colour saturation, which made them harder to discern from the background , and were also closely spaced together</li>
+                      <li>The blocks in the the goals scored key were only distinguished through 1 visual channel, colour, which made it hard to discern between them</li>
+                      <li>The pop ups used in the map were small and lacked opacity, which obscured information from the user through making it hard to read the data within them and also obscuring data behind them</li>
+                      <li>The wide bars on the bar chart made it hard to compare figures effectively when the figures are not too far off from each other</li>
+                      <li>The small font on the bar chart made it hard for the viewer to see the information</li>
+                      <li>The lack of clarity on which countries hosted the world cup on the timeline made it hard to discern the two</li>
+                      <li>The poor luminance contrast on labels in the axis with the background made it hard to distinguish the two</li>
+                      <li>The small spacing on the radio selections and labels made it hard to distinguish them</li>
+                    </ul>
+                    <p>We solved these problems by:</p>
+                    <ul>
+                      <li>Reducing the colour saturation in the overview map</li>
+                      <li>Making the year in timeline bigger and bolder and adding spacing between the elements</li>
+                      <li>Increasing the size of key the blocks in the goals scored visual query</li>
+                      <li>Making the popups appearing when the viewer hovers over the map bigger , transparent and also increasing the text size</li>
+                      <li>Making the bar chart bars narrower</li>
+                      <li>Differentiating between the host and winner on the timeline with an icon</li>
+                      <li>Removing the space around the timeline</li>
+                      <li>Changing the colour of axis labels in the small graphs  to white</li>
+                      <li>Increasing spaces between radio selections and labels to differentiate between them effectively</li>
+                      <li>Adding axis labels on small graphs</li>
+                    </ul>
+                </div>
                 <div id="sw">
                     <h2>Strengths and Weaknesses of Design</h2>
                 </div>
@@ -250,15 +368,14 @@
                 </div>
                 <div id="who">
                     <h2>Who did What</h2>
-                    <p>Mitch coded the map and tree in the visualisation as well as integrating the bar graphs from Tumelo, with some cosmetic changes. He also wrote the <a href="#lit">Literature Review</a> and the <a href="#data">Data</a> section. Tumelo programmed the bar charts in the visualisation and wrote The discussion of the first 2 presented iterations, as well as the <a href="#sw">Strengths and Weaknesses</a> of the final design and the <a href="#con">Conclusion</a>. Roscoe provided data for the map in the visualisation and wrote the <a href="#int">Introduction</a>, the <a href="#quer">Visual Queries</a>, and the <a href="#design">Description of the Design</a></p>
+                    <p>Mitch coded the map and tree in the visualisation as well as integrating the bar graphs from Tumelo, with some cosmetic changes. He also wrote the <a href="#lit">Literature Review</a> and the <a href="#data">Data</a> section as well as compiling the report. Tumelo programmed the bar charts in the visualisation and wrote The discussion of the <a href="#iter">Design Iterations</a>, as well as the <a href="#sw">Strengths and Weaknesses</a> of the final design and the <a href="#con">Conclusion</a>. Roscoe provided data for the map in the visualisation and wrote the <a href="#int">Introduction</a>, the <a href="#quer">Visual Queries</a>, the <a href="#design">Description of the Design</a>, and the <a href="#design2">Design Descisions</a></p>
                 </div>
 
                 <div id="ref">
                     <h2>References</h2>
                     <ol>
                       <li>Gregor Aisch. (20 June 2014). The Clubs That Connect The World Cup. Retrieved from <a id="src1" href="http://www.nytimes.com/interactive/2014/06/20/sports/worldcup/how-world-cup-players-are-connected.html?_r=0">http://www.nytimes.com/interactive/2014/06/20/sports/worldcup/how-world-cup-players-are-connected.html?_r=0</a></li>
-                      <li>Drew Skau. (11 June 2014).A Look at the Most Interesting World Cup Visualizations and Champion Predictions. Retrieved from <a id="src2" href="http://blog.visual.ly/visualizing-predicting-world-cup/">http://blog.visual.ly/visualizing-predicting-world-cup/</a></li>
-                      <li>Fifa World Cup South Africa. Retrieved from <a id="src3" href="http://www.fifa.com/worldcup/archive/southafrica2010/teams/index.html">http://www.fifa.com/worldcup/archive/southafrica2010/teams/index.html</a></li>
+                      <li>Drew Skau. (11 June 2014).A Look at the Most Interesting World Cup Visualizations and Champion Predictions. Retrieved from <a id="src2"<p></p>
                       <li>Emil Johansson. (30 June 2014). A look at the 2014 FIFA World Cup. Retrieved from <a id="src4" href="http://ejoh.se/worldcup2014/goals/">http://ejoh.se/worldcup2014/goals/</a></li>
                       <li>openfootball/world-cup. Retrieved from <a id="src5" href="https://github.com/openfootball/world-cup">https://github.com/openfootball/world-cup</a></li>
                     </ol>
