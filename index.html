@@ -61,7 +61,6 @@
                     <a href="#design" class="list-group-item">Description of Design</a>
                     <a href="#design2" class="list-group-item">Design Decisions</a>
                     <a href="#iter" class="list-group-item">Design Iterations</a>
-                    <a href="#sw" class="list-group-item">Strengths and Weaknesses of Design</a>
                     <a href="#con" class="list-group-item">Conclusion and Future Work</a>
                     <a href="#who" class="list-group-item">Who did What</a>
                     <a href="#ref" class="list-group-item">References</a>
@@ -75,6 +74,13 @@
                 </div>
                 <div id="int">
                     <h2>Introduction</h2>
+                    <blockquote>
+                      <p>“O jogo bonito”- the beautiful game</p>
+                    </blockquote>
+                    <p>This term was used by legend Pele to describe the sport of soccer. It is the arguably the most popular sport in the world with most of the countries in the world playing it and millions of fans glued to their television sets every weekend to watch it. This makes the Fifa world cup the most popular and most watched sporting event on the planet.</p>
+                    <p>The Fifa world cup finals takes place every four years with 32 teams competing over a period of a month. A total of 64 matches are played at each tournament. This produces a lot of data that is of interest to the millions of soccer lovers all around the world.</p>
+                    <p>The problems this data presents to the average soccer fan is that it is mostly stored in tables with countless amounts of columns and rows, with numbers and figures that are enough to confuse even computer science graduates.</p>
+                    <p>The goal of this visualization project is to take the data and present it to the average soccer fan in a manner that is easy to understand, analyse and use to prove that the football team he loves so much is truly the best team in the world.</p>
                 </div>
                 <div id="lit">
                     <h2>Literature Review</h2>
@@ -307,6 +313,18 @@
                     <p>We have gone through 3 design iterations in order to fine tune our visualisation to the point where it most conforms to the design principles. In order for us to create a visualisation which will allow the viewer to gain rapid access to multiple visual queries, while still maintaining cohesiveness, we made use of 3 visual elements, a map, timeline and a bar graph. These visual elements allowed us to represent data of the same subject in different ways, giving the viewer a holistic view of the subject. The subjects we represented were goals scored, top scorer and attendance.</p>
                     <p>Through critiquing the design at each iteration, we managed to note problems with our design and come up with solutions for them.</p>
                     <h3>Iteration 1</h3>
+                    <figure>
+                      <img id ="fig8" class="img-left" src = "img/tumelo/01.jpeg">
+                      <figcaption>
+                        <strong>Figure 8: </strong> First Iteration overview map and timeline
+                      </figcaption>
+                    </figure>
+                    <figure>
+                      <img id ="fig9" class="img-left" src = "img/tumelo/02.jpeg">
+                      <figcaption>
+                        <strong>Figure 9: </strong> First Iteration bar charts
+                      </figcaption>
+                    </figure>
                     <p>In order to reach our 1st formal design, we went through 3 other designs where we attempted to use various visual components in order to develop a visualisation which not only display multiple dimensions of data, but is also intuitive and represents the data best.</p>
                     <p>We ended up going with this design since we felt the following attributes conformed to the design principles the best:</p>
                     <ul>
@@ -359,16 +377,40 @@
                       <li>Increasing spaces between radio selections and labels to differentiate between them effectively</li>
                       <li>Adding axis labels on small graphs</li>
                     </ul>
-                </div>
-                <div id="sw">
-                    <h2>Strengths and Weaknesses of Design</h2>
+                    <h3>Final Design Analysis</h3>
+                    <p>Our <a href="/visualisation.html">final design</a> brings together all the strengths of our previous designs, and builds on them in order to create a design which not only adheres to visual principles but is also visually appealing.</p>
+                    <p>With this design, we aimed to find a middle ground between the top down and bottom up information processing procedures that take place when we perceive visual information in order to enhance it’s effectiveness. </p>
+                    <p>We used the following top down features, in order to capture the user’s attention:</p>
+                    <ul>
+                      <li>A grassy background, which makes use of gist perception in order to get the user to characterise the scene to a soccer context</li>
+                      <li>Known icons such as trophies and flags to make use of previously learned concepts to make the visualisation as intuitive as possible</li>
+                      <li>Colours with unique hues for humans in order to draw attention to important visual elements</li>
+                      <li>A variation of certain visual elements through 2 visual channels, i.e goals scored key which vary through size and colour</li>
+                    </ul>
+                    <p>We also made use of the following bottom up features, in order to convey information to the user in the event that they would like to interrogate the visualisation further:</p>
+                    <ul>
+                      <li>A hover over feature, which  brings additional information to light when the user moves their cursor above a graphic representing a visual element which conveys a lot of information (i.e exact attendance numbers on bar chart, specific information on competing countries in the world cup on the map hover over)</li>
+                      <li>Radio selections in order to allow the user to filter through information as they choose</li>
+                    </ul>
+                    <p>In order to make our design more visually appealing , we also avoided using a high amount of saturation for large graphical elements and made use of continuous colour scales in order to represent a progression in certain visual elements (i.e. attendance, goals scored and top scorer key)</p>
+                    <p>In spite of the changes that we have made to the visualisation , it still has various areas of improvement, namely:</p>
+                    <ul>
+                      <li>The timeline currently does not display any further information about competing teams in a specific world cup once it is clicked</li>
+                      <li>The bar charts would be more easily distinguishable if they had the years written on the individual bars</li>
+                    </ul>
                 </div>
                 <div id="con">
                     <h2>Conclusion and Future Work</h2>
+                    <p>The visualisation that we have created aims to educate the viewer on various soccer world cup statistics in the quickest and most intuitive way possible , through making use of visual principles that make information retrieval as rapid as possible. Through the use of principles that communicate with both top down and bottom up information processing techniques that we use to interpret information , we have aimed to make information retrieval as quick and easy as possible.</p>
+                    <p>Areas for future work on our visualisation are:</p>
+                    <ul>
+                      <li>The timeline: It can be improved to display more information on various stages of the world cup , as proposed in the 1st iteration</li>
+                      <li>The bar chart can be improved in order to more easily convey information to the viewer</li>
+                    </ul>
                 </div>
                 <div id="who">
                     <h2>Who did What</h2>
-                    <p>Mitch coded the map and tree in the visualisation as well as integrating the bar graphs from Tumelo, with some cosmetic changes. He also wrote the <a href="#lit">Literature Review</a> and the <a href="#data">Data</a> section as well as compiling the report. Tumelo programmed the bar charts in the visualisation and wrote The discussion of the <a href="#iter">Design Iterations</a>, as well as the <a href="#sw">Strengths and Weaknesses</a> of the final design and the <a href="#con">Conclusion</a>. Roscoe provided data for the map in the visualisation and wrote the <a href="#int">Introduction</a>, the <a href="#quer">Visual Queries</a>, the <a href="#design">Description of the Design</a>, and the <a href="#design2">Design Descisions</a></p>
+                    <p>Mitch coded the map and tree in the visualisation as well as integrating the bar graphs from Tumelo, with some cosmetic changes. He also wrote the <a href="#lit">Literature Review</a> and the <a href="#data">Data</a> section as well as compiling the report. Tumelo programmed the bar charts in the visualisation and wrote The discussion of the <a href="#iter">Design Iterations</a>, as well as the <a href="#con">Conclusion</a>. Roscoe provided data for the map in the visualisation and wrote the <a href="#int">Introduction</a>, the <a href="#quer">Visual Queries</a>, the <a href="#design">Description of the Design</a>, and the <a href="#design2">Design Descisions</a></p>
                 </div>
 
                 <div id="ref">
