@@ -83,7 +83,7 @@
                         <strong>Figure 1: </strong> "The Clubs That Connect The World Cup"<a href="#src1">[1]</a> visualisation
                       </figcaption>
                     </figure>
-                    <p>The visualistion allows trhe user to see these connections by hovering over a particulat 'bubble' to see the connections to and from it. The visualisation makes good use of greyscale, fading unnecessary data on hover while still giving the viewer the ability to get an overall feel for the entire dataset while focusing on a specific piece of data. This is shown in <a href="#fig2">Figure 2</a></p>
+                    <p>The visualistion allows the user to see these connections by hovering over a particulat 'bubble'. It makes good use of greyscale, fading unnecessary data on hover while still giving the viewer the ability to get an overall feel for the entire dataset while focusing on a specific piece of data. This is shown in <a href="#fig2">Figure 2</a></p>
                     <p></p>
                     <figure>
                       <img id ="fig2" class="img-left" src = "img/litrev/02.png">
@@ -91,7 +91,7 @@
                         <strong>Figure 2: </strong> "The Clubs That Connect The World Cup"<a href="#src1">[1]</a> visualisation showing use of greyscale
                       </figcaption>
                     </figure>
-                    <p>"The Clubs That Connect The World Cup" makes use of circles, whose size repsesent the number of players connected to them, however showing one dimensional data as a two dimensional shape is problematic as it is difficult to compare the size of circles, especially when they are similar in size. Furthermore the visualisation breaks this convention by making large circles for popular players (see <a href="#fig2">Figure 2</a>) in order to display their images. The visualisation also uses green on white which has a low luminance contrast, making it harderto see than a darker colour.</p>
+                    <p>"The Clubs That Connect The World Cup" makes use of circles, whose size repsesent the number of players connected to them, however showing one dimensional data as a two dimensional shape is problematic as it is difficult to compare the size of circles, especially when they are similar in size. Furthermore the visualisation breaks this convention by making large circles for popular players (see <a href="#fig2">Figure 2</a>) in order to display their images. The visualisation also uses green on white which has a low luminance contrast, making it harder to see than a darker colour.</p>
                     <figure>
                       <img id ="fig3" class="img-left" src = "img/litrev/03.png">
                       <figcaption>
@@ -101,6 +101,35 @@
                     <p> The second visualisation, "A Look at the Most Interesting World Cup Visualizations and Champion Predictions"<a href="#src2">[2]</a>, seen in <a href="#fig3">Figure 3</a>, shows the probability of different teams winning the soccer world cup.</p>
                     <p>The visualisation also makes good use of greyscale, highlighting the most likely winner, while still allowing the viewer to have an overview of the data. The data is also easily visible and comparable, and multiple dimensions are shown.</p>
                     <p>The visualisation uses yellow on white which provides a low luminance contrast making it difficult to discern, and coupled with this it is not immediately apparent what the data means.</p>
+                    <figure>
+                      <img id ="fig4" class="img-left" src = "img/litrev/04.png">
+                      <figcaption>
+                        <strong>Figure 4: </strong> "Fifa World Cup South Africa"<a href="#src3">[3]</a> visualisation
+                      </figcaption>
+                    </figure>
+                    <p>The third visualisation, taken from the Fifa website<a href="#src3">[3]</a> shows the teams that participated in the soccer world cup. We liked the use of the map (<a href="#fig4">Figure 4</a>) to display the information because it adds a location dimension to data so we integrated it into our final visualisation. We also like the use of flags (<a href="#fig5">Figure 5</a>) and this was also integrated into the design. The use of greyscale in the small maps of <a href="#fig5">Figure 5</a> was also well used. The block showing a zoomed in version of Europe is helpful in displaying the data as Europe has a number of small soccer-playing countries.</p>
+                    <figure>
+                      <img id ="fig5" class="img-left" src = "img/litrev/05.png">
+                      <figcaption>
+                        <strong>Figure 5: </strong> "Fifa World Cup South Africa"<a href="#src3">[3]</a> visualisation
+                      </figcaption>
+                    </figure>
+                    <p>The visualisation shows the same set of data in both <a href="#fig4">Figure 4</a> and <a href="#fig5">Figure 5</a> this makes one of the parts redundent, and could be replaced with more information. The visualisation also makes poor use of hover over on the map showing only the countries name, where there could be much more data.</p>
+                    <figure>
+                      <img id ="fig6" class="img-left" src = "img/litrev/06.png">
+                      <figcaption>
+                        <strong>Figure 6: </strong> "A look at the 2014 FIFA World Cup"<a href="#src4">[4]</a> visualisation showing goals scored.
+                      </figcaption>
+                    </figure>
+                    <p>The fourth visualisation, "A look<a href="#fig6">Figure 6</a>en colour, and markings which clearly indicate that it is a soccer field.</p>
+                    <p><a href="#fig6">Figure 6</a> however places yellow dots on a green field providing a low luminace contrast (even though the green is darker, it is not as effective as black dots on a white field). and the hover over obscures the data, and does not make use of any depth cues besides occlusion.</p>
+                    <figure>
+                      <img id ="fig7" class="img-left" src = "img/litrev/07.png">
+                      <figcaption>
+                        <strong>Figure 7: </strong> "A look at the 2014 FIFA World Cup"<a href="#src4">[4]</a> visualisation showing time played.
+                      </figcaption>
+                    </figure>
+                    <p>In <a href="#fig7">Figure 7</a> the hover over also obscures the data, and it is difficult to find what each block means without hovering. The names of the countries also are a light grey against a light grey background and could be made more visually distinct by making the text black.</p>
                 </div>
                 <div id="quer">
                     <h2>Visual Queries Supported</h2>
@@ -108,7 +137,7 @@
                 <div id="data">
                     <h2>Data</h2>
                     <p>
-                        The data used for the visualistion was taken from Wikipedia and the <a href="https://github.com/openfootball/world-cup">openfootball</a>[] Github repository. The data from openfootball was the initial dataset but due to the difficulty of parsing the data (as the data was in structured text format and different years had slightly differently structured data).
+                        The data used for the visualistion was taken from Wikipedia and the openfootball<a href="#src5">[5]</a> Github repository. The data from openfootball was the initial dataset but due to the difficulty of parsing the data (as the data was in structured text format and different years had slightly differently structured data) a parser was not built and data was manually extracted from openfootball and Wikipedia. Due to this some data is simply replicated over the years to give an idea of how the visualisation would work.
                     </p>
                 </div>
                 <div id="design">
@@ -122,6 +151,7 @@
                 </div>
                 <div id="who">
                     <h2>Who did What</h2>
+                    <p>Mitch coded the map and tree in the visualisation as well as integrating the bar graphs from Tumelo, with some cosmetic changes. He also wrote the <a href="#lit">Literature Review</a> and the <a href="#data">Data</a> section. Tumelo programmed the bar charts in the visualisation and wrote The discussion of the first 2 presented iterations, as well as the <a href="#sw">Strengths and Weaknesses</a> of the final design and the <a href="#con">Conclusion</a>. Roscoe provided data for the map in the visualisation and wrote the <a href="#int">Introduction</a>, the <a href="#quer">Visual Queries</a>, and the <a href="#design">Description of the Design</a></p>
                 </div>
 
                 <div id="ref">
@@ -129,9 +159,9 @@
                     <ol>
                       <li>Gregor Aisch. (20 June 2014). The Clubs That Connect The World Cup. Retrieved from <a id="src1" href="http://www.nytimes.com/interactive/2014/06/20/sports/worldcup/how-world-cup-players-are-connected.html?_r=0">http://www.nytimes.com/interactive/2014/06/20/sports/worldcup/how-world-cup-players-are-connected.html?_r=0</a></li>
                       <li>Drew Skau. (11 June 2014).A Look at the Most Interesting World Cup Visualizations and Champion Predictions. Retrieved from <a id="src2" href="http://blog.visual.ly/visualizing-predicting-world-cup/">http://blog.visual.ly/visualizing-predicting-world-cup/</a></li>
-                      <li>CN Tower</li>
-                      <li>Ostankino Tower</li>
-                      <li>Oriental Pearl Tower</li>
+                      <li>Fifa World Cup South Africa. Retrieved from <a id="src3" href="http://www.fifa.com/worldcup/archive/southafrica2010/teams/index.html">http://www.fifa.com/worldcup/archive/southafrica2010/teams/index.html</a></li>
+                      <li>Emil Johansson. (30 June 2014). A look at the 2014 FIFA World Cup. Retrieved from <a id="src4" href="http://ejoh.se/worldcup2014/goals/">http://ejoh.se/worldcup2014/goals/</a></li>
+                      <li>openfootball/world-cup. Retrieved from <a id="src5" href="https://github.com/openfootball/world-cup">https://github.com/openfootball/world-cup</a></li>
                     </ol>
                 </div>
 
@@ -144,7 +174,6 @@
     <!-- Bootstrap -->
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
 </body>
 
 </html>

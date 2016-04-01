@@ -46,6 +46,9 @@ figure {
   margin-bottom: 20px;
   text-align: center;
 }
+.list-group {
+  position: fixed;
+}
 /*.img-left {
   float: left;
   margin-right: 20px;
